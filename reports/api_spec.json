@@ -1,0 +1,2507 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Discovered API",
+    "version": "1.0.0",
+    "description": "Auto-generated from 55 captured API endpoints. Source: Playwright traffic capture."
+  },
+  "paths": {
+    "/admin/api-keys": {
+      "get": {
+        "summary": "GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=secret",
+        "operationId": "get_admin_api-keys?q=&limit=3&fields=id%2Cti",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminApi-Keys?Q=&Limit=3&Fields=Id%2Ctitle%2Credacted&Type=SecretResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 563.0
+      }
+    },
+    "/admin/campaigns": {
+      "get": {
+        "summary": "GET /admin/campaigns?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_campaigns?q=&limit=3&fields=id%2Cn",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminCampaigns?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 500.0
+      }
+    },
+    "/admin/collections": {
+      "get": {
+        "summary": "GET /admin/collections?q=&limit=3&fields=id%2Ctitle",
+        "operationId": "get_admin_collections?q=&limit=3&fields=id%2",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminCollections?Q=&Limit=3&Fields=Id%2CtitleResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 406.0
+      }
+    },
+    "/admin/customer-groups": {
+      "get": {
+        "summary": "GET /admin/customer-groups?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_customer-groups?q=&limit=3&fields=",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminCustomer-Groups?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 484.0
+      }
+    },
+    "/admin/customers": {
+      "get": {
+        "summary": "GET /admin/customers?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name",
+        "operationId": "get_admin_customers?q=&limit=3&fields=id%2Ce",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminCustomers?Q=&Limit=3&Fields=Id%2Cemail%2Cfirst_Name%2Clast_NameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 406.0
+      }
+    },
+    "/admin/draft-orders": {
+      "get": {
+        "summary": "GET /admin/draft-orders?limit=20&offset=0&order=-created_at&fields=%2Bcustomer.%2A%2C%2Bsales_channel.%2A%2C%2Bemail%2C%2Bdisplay_id%2C%2Btotal%2C%2Bcurrency_code%2C%2Bshipping_total%2C%2Btax_total%2C%2Bdiscount_total%2C%2Bitems.%2A%2C%2Bitems.variant.%2A%2C%2Bitems.variant.product.%2A%2C%2Bitems.variant.product.shipping_profile.%2A%2C%2Bitems.variant.options.%2A%2C%2Bregion.%2A",
+        "operationId": "get_admin_draft-orders?limit=20&offset=0&ord",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminDraft-Orders?Limit=20&Offset=0&Order=-Created_At&Fields=%2Bcustomer.%2A%2C%2Bsales_Channel.%2A%2C%2Bemail%2C%2Bdisplay_Id%2C%2Btotal%2C%2Bcurrency_Code%2C%2Bshipping_Total%2C%2Btax_Total%2C%2Bdiscount_Total%2C%2Bitems.%2A%2C%2Bitems.Variant.%2A%2C%2Bitems.Variant.Product.%2A%2C%2Bitems.Variant.Product.Shipping_Profile.%2A%2C%2Bitems.Variant.Options.%2A%2C%2Bregion.%2AResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 110.0
+      }
+    },
+    "/admin/feature-flags": {
+      "get": {
+        "summary": "GET /admin/feature-flags",
+        "operationId": "get_admin_feature-flags",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminFeature-FlagsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 16.0
+      }
+    },
+    "/admin/inventory-items": {
+      "get": {
+        "summary": "GET /admin/inventory-items?q=&limit=3&fields=id%2Ctitle%2Csku",
+        "operationId": "get_admin_inventory-items?q=&limit=3&fields=",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminInventory-Items?Q=&Limit=3&Fields=Id%2Ctitle%2CskuResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 500.0
+      }
+    },
+    "/admin/notifications": {
+      "get": {
+        "summary": "GET /admin/notifications?limit=1&offset=0&fields=created_at",
+        "operationId": "get_admin_notifications?limit=1&offset=0&fie",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminNotifications?Limit=1&Offset=0&Fields=Created_AtResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 172.0
+      }
+    },
+    "/admin/orders": {
+      "get": {
+        "summary": "GET /admin/orders?q=&limit=3&fields=id%2Cdisplay_id%2Cemail",
+        "operationId": "get_admin_orders?q=&limit=3&fields=id%2Cdisp",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminOrders?Q=&Limit=3&Fields=Id%2Cdisplay_Id%2CemailResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 344.0
+      }
+    },
+    "/admin/price-lists": {
+      "get": {
+        "summary": "GET /admin/price-lists?q=&limit=3&fields=id%2Ctitle",
+        "operationId": "get_admin_price-lists?q=&limit=3&fields=id%2",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminPrice-Lists?Q=&Limit=3&Fields=Id%2CtitleResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 515.0
+      }
+    },
+    "/admin/product-categories": {
+      "get": {
+        "summary": "GET /admin/product-categories?limit=3&fields=id%2Cname",
+        "operationId": "get_admin_product-categories?limit=3&fields=",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminProduct-Categories?Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 406.0
+      }
+    },
+    "/admin/product-tags": {
+      "get": {
+        "summary": "GET /admin/product-tags?q=&limit=3&fields=id%2Cvalue",
+        "operationId": "get_admin_product-tags?q=&limit=3&fields=id%",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminProduct-Tags?Q=&Limit=3&Fields=Id%2CvalueResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 593.0
+      }
+    },
+    "/admin/product-types": {
+      "get": {
+        "summary": "GET /admin/product-types?q=&limit=3&fields=id%2Cvalue",
+        "operationId": "get_admin_product-types?q=&limit=3&fields=id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminProduct-Types?Q=&Limit=3&Fields=Id%2CvalueResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 578.0
+      }
+    },
+    "/admin/product-variants": {
+      "get": {
+        "summary": "GET /admin/product-variants?q=&limit=3&fields=id%2Ctitle%2Csku%2Cproduct_id",
+        "operationId": "get_admin_product-variants?q=&limit=3&fields",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminProduct-Variants?Q=&Limit=3&Fields=Id%2Ctitle%2Csku%2Cproduct_IdResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 406.0
+      }
+    },
+    "/admin/products": {
+      "get": {
+        "summary": "GET /admin/products?q=&limit=3&fields=id%2Ctitle%2Cthumbnail%2C-type%2C-collection%2C-options%2C-tags%2C-images%2C-variants%2C-sales_channels",
+        "operationId": "get_admin_products?q=&limit=3&fields=id%2Cti",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminProducts?Q=&Limit=3&Fields=Id%2Ctitle%2Cthumbnail%2C-Type%2C-Collection%2C-Options%2C-Tags%2C-Images%2C-Variants%2C-Sales_ChannelsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 250.0
+      }
+    },
+    "/admin/promotions": {
+      "get": {
+        "summary": "GET /admin/promotions?q=&limit=3&fields=id%2Ccode%2Cstatus",
+        "operationId": "get_admin_promotions?q=&limit=3&fields=id%2C",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminPromotions?Q=&Limit=3&Fields=Id%2Ccode%2CstatusResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 500.0
+      }
+    },
+    "/admin/regions": {
+      "get": {
+        "summary": "GET /admin/regions?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_regions?q=&limit=3&fields=id%2Cnam",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminRegions?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 515.0
+      }
+    },
+    "/admin/return-reasons": {
+      "get": {
+        "summary": "GET /admin/return-reasons?q=&limit=3&fields=id%2Clabel%2Cvalue",
+        "operationId": "get_admin_return-reasons?q=&limit=3&fields=i",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminReturn-Reasons?Q=&Limit=3&Fields=Id%2Clabel%2CvalueResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 531.0
+      }
+    },
+    "/admin/sales-channels": {
+      "get": {
+        "summary": "GET /admin/sales-channels?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_sales-channels?q=&limit=3&fields=i",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminSales-Channels?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 547.0
+      }
+    },
+    "/admin/shipping-profiles": {
+      "get": {
+        "summary": "GET /admin/shipping-profiles?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_shipping-profiles?q=&limit=3&field",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminShipping-Profiles?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 563.0
+      }
+    },
+    "/admin/stock-locations": {
+      "get": {
+        "summary": "GET /admin/stock-locations?q=&limit=3&fields=id%2Cname",
+        "operationId": "get_admin_stock-locations?q=&limit=3&fields=",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminStock-Locations?Q=&Limit=3&Fields=Id%2CnameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 593.0
+      }
+    },
+    "/admin/stores": {
+      "get": {
+        "summary": "GET /admin/stores",
+        "operationId": "get_admin_stores",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 391.0
+      }
+    },
+    "/admin/tax-regions": {
+      "get": {
+        "summary": "GET /admin/tax-regions?q=&limit=3&fields=id%2Ccountry_code%2Cprovince_code",
+        "operationId": "get_admin_tax-regions?q=&limit=3&fields=id%2",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminTax-Regions?Q=&Limit=3&Fields=Id%2Ccountry_Code%2Cprovince_CodeResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 531.0
+      }
+    },
+    "/admin/users/me": {
+      "get": {
+        "summary": "GET /admin/users/me",
+        "operationId": "get_admin_users_me",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminUsersMeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "x-sample-count": 7,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 32.0
+      }
+    },
+    "/admin/users": {
+      "get": {
+        "summary": "GET /admin/users?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name",
+        "operationId": "get_admin_users?q=&limit=3&fields=id%2Cemail",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAdminUsers?Q=&Limit=3&Fields=Id%2Cemail%2Cfirst_Name%2Clast_NameResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 515.0
+      }
+    },
+    "/app/@fs/C:/Users/VVnT/my-medusa-store/node_modules/vite/dist/client/env.mjs": {
+      "get": {
+        "summary": "GET /app/@fs/C:/Users/VVnT/my-medusa-store/node_modules/vite/dist/client/env.mjs",
+        "operationId": "get_app_@fs_C:_Users_VVnT_my-medusa-store_no",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 109.0
+      }
+    },
+    "/app/@fs/C:/Users/VVnT/my-medusa-store/src/admin/i18n/index.ts": {
+      "get": {
+        "summary": "GET /app/@fs/C:/Users/VVnT/my-medusa-store/src/admin/i18n/index.ts",
+        "operationId": "get_app_@fs_C:_Users_VVnT_my-medusa-store_sr",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 5,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/collections": {
+      "get": {
+        "summary": "GET /app/admin/collections",
+        "operationId": "get_app_admin_collections",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 16.0
+      }
+    },
+    "/app/admin/feature-flags": {
+      "get": {
+        "summary": "GET /app/admin/feature-flags",
+        "operationId": "get_app_admin_feature-flags",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/notifications": {
+      "get": {
+        "summary": "GET /app/admin/notifications",
+        "operationId": "get_app_admin_notifications",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/orders": {
+      "get": {
+        "summary": "GET /app/admin/orders",
+        "operationId": "get_app_admin_orders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/product-categories": {
+      "get": {
+        "summary": "GET /app/admin/product-categories",
+        "operationId": "get_app_admin_product-categories",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/product-variants": {
+      "get": {
+        "summary": "GET /app/admin/product-variants",
+        "operationId": "get_app_admin_product-variants",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/products": {
+      "get": {
+        "summary": "GET /app/admin/products",
+        "operationId": "get_app_admin_products",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/stores": {
+      "get": {
+        "summary": "GET /app/admin/stores",
+        "operationId": "get_app_admin_stores",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/admin/users/me": {
+      "get": {
+        "summary": "GET /app/admin/users/me",
+        "operationId": "get_app_admin_users_me",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 16.0
+      }
+    },
+    "/app/auth/session": {
+      "get": {
+        "summary": "GET /app/auth/session",
+        "operationId": "get_app_auth_session",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/auth/user/emailpass": {
+      "get": {
+        "summary": "GET /app/auth/user/emailpass",
+        "operationId": "get_app_auth_user_emailpass",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 15.0
+      }
+    },
+    "/app/cloud/auth": {
+      "get": {
+        "summary": "GET /app/cloud/auth",
+        "operationId": "get_app_cloud_auth",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/app/orders": {
+      "get": {
+        "summary": "GET /app/orders",
+        "operationId": "get_app_orders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 15.0
+      }
+    },
+    "/app/products": {
+      "get": {
+        "summary": "GET /app/products",
+        "operationId": "get_app_products",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Response"
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 16.0
+      }
+    },
+    "/cloud/auth": {
+      "get": {
+        "summary": "GET /cloud/auth",
+        "operationId": "get_cloud_auth",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCloudAuthResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none"
+      }
+    },
+    "/auth/session": {
+      "post": {
+        "summary": "POST /auth/session",
+        "operationId": "post_auth_session",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostAuthSessionResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 15.0
+      }
+    },
+    "/auth/user/emailpass": {
+      "post": {
+        "summary": "POST /auth/user/emailpass",
+        "operationId": "post_auth_user_emailpass",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostAuthUserEmailpassResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-sample-count": 1,
+        "x-auth-pattern": "none",
+        "x-median-latency-ms": 328.0,
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetAdminApi-Keys?Q=&Limit=3&Fields=Id%2Ctitle%2Credacted&Type=PublishableResponse": {
+        "type": "object",
+        "properties": {
+          "api_keys": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "redacted": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "redacted",
+                "title"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "api_keys",
+          "count",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminApi-Keys?Q=&Limit=3&Fields=Id%2Ctitle%2Credacted&Type=SecretResponse": {
+        "type": "object",
+        "properties": {
+          "api_keys": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "api_keys",
+          "count",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminCampaigns?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "campaigns": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "campaigns",
+          "count",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminCollections?Q=&Limit=3&Fields=Id%2CtitleResponse": {
+        "type": "object",
+        "properties": {
+          "collections": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "collections",
+          "count",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminCustomer-Groups?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "customer_groups": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "customer_groups",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminCustomers?Limit=1000&Fields=Id%2CemailResponse": {
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "customers",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminCustomers?Q=&Limit=3&Fields=Id%2Cemail%2Cfirst_Name%2Clast_NameResponse": {
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "customers",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminDraft-Orders?Limit=20&Offset=0&Order=-Created_At&Fields=%2Bcustomer.%2A%2C%2Bsales_Channel.%2A%2C%2Bemail%2C%2Bdisplay_Id%2C%2Btotal%2C%2Bcurrency_Code%2C%2Bshipping_Total%2C%2Btax_Total%2C%2Bdiscount_Total%2C%2Bitems.%2A%2C%2Bitems.Variant.%2A%2C%2Bitems.Variant.Product.%2A%2C%2Bitems.Variant.Product.Shipping_Profile.%2A%2C%2Bitems.Variant.Options.%2A%2C%2Bregion.%2AResponse": {
+        "type": "object",
+        "properties": {
+          "draft_orders": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "draft_orders",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminFeature-FlagsResponse": {
+        "type": "object",
+        "properties": {
+          "feature_flags": {
+            "type": "object",
+            "properties": {
+              "backend_hmr": {
+                "type": "boolean"
+              },
+              "caching": {
+                "type": "boolean"
+              },
+              "index_engine": {
+                "type": "boolean"
+              },
+              "rbac": {
+                "type": "boolean"
+              },
+              "translation": {
+                "type": "boolean"
+              },
+              "view_configurations": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "backend_hmr",
+              "caching",
+              "index_engine",
+              "rbac",
+              "translation",
+              "view_configurations"
+            ]
+          }
+        },
+        "required": [
+          "feature_flags"
+        ]
+      },
+      "GetAdminInventory-Items?Limit=20Response": {
+        "type": "object",
+        "properties": {
+          "inventory_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "sku": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "thumbnail": {
+                  "type": "null"
+                },
+                "origin_country": {
+                  "type": "null"
+                },
+                "hs_code": {
+                  "type": "null"
+                },
+                "requires_shipping": {
+                  "type": "boolean"
+                },
+                "mid_code": {
+                  "type": "null"
+                },
+                "material": {
+                  "type": "null"
+                },
+                "weight": {
+                  "type": "null"
+                },
+                "length": {
+                  "type": "null"
+                },
+                "height": {
+                  "type": "null"
+                },
+                "width": {
+                  "type": "null"
+                },
+                "metadata": {
+                  "type": "null"
+                },
+                "reserved_quantity": {
+                  "type": "integer"
+                },
+                "stocked_quantity": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "location_levels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "object"
+                      },
+                      "location_id": {
+                        "type": "object"
+                      },
+                      "metadata": {
+                        "type": "object"
+                      },
+                      "inventory_item_id": {
+                        "type": "object"
+                      },
+                      "raw_stocked_quantity": {
+                        "type": "object"
+                      },
+                      "raw_reserved_quantity": {
+                        "type": "object"
+                      },
+                      "raw_incoming_quantity": {
+                        "type": "object"
+                      },
+                      "created_at": {
+                        "type": "object"
+                      },
+                      "updated_at": {
+                        "type": "object"
+                      },
+                      "deleted_at": {
+                        "type": "object"
+                      },
+                      "available_quantity": {
+                        "type": "object"
+                      },
+                      "stocked_quantity": {
+                        "type": "object"
+                      },
+                      "reserved_quantity": {
+                        "type": "object"
+                      },
+                      "incoming_quantity": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "available_quantity",
+                      "created_at",
+                      "deleted_at",
+                      "id",
+                      "incoming_quantity",
+                      "inventory_item_id",
+                      "location_id",
+                      "metadata",
+                      "raw_incoming_quantity",
+                      "raw_reserved_quantity",
+                      "raw_stocked_quantity",
+                      "reserved_quantity",
+                      "stocked_quantity",
+                      "updated_at"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "created_at",
+                "description",
+                "height",
+                "hs_code",
+                "id",
+                "length",
+                "location_levels",
+                "material",
+                "metadata",
+                "mid_code",
+                "origin_country",
+                "requires_shipping",
+                "reserved_quantity",
+                "sku",
+                "stocked_quantity",
+                "thumbnail",
+                "title",
+                "updated_at",
+                "weight",
+                "width"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "inventory_items",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminInventory-Items?Q=&Limit=3&Fields=Id%2Ctitle%2CskuResponse": {
+        "type": "object",
+        "properties": {
+          "inventory_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "sku": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "sku",
+                "title"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "inventory_items",
+          "limit",
+          "offset"
+        ]
+      },
+      "GetAdminNotifications?Limit=1&Offset=0&Fields=Created_AtResponse": {
+        "type": "object",
+        "properties": {
+          "notifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "created_at": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "created_at",
+                "id"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "notifications",
+          "offset"
+        ]
+      },
+      "GetAdminOrders?Fields=Id%2Cstatus%2Ccreated_At%2Cemail%2Cdisplay_Id%2Ccustom_Display_Id%2Cpayment_Status%2Cfulfillment_Status%2Ctotal%2Ccurrency_Code%2C%2Acustomer%2C%2Asales_Channel%2C%2Apayment_Collections&Limit=20&Offset=0&Order=-Created_AtResponse": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "orders"
+        ]
+      },
+      "GetAdminOrders?Q=&Limit=3&Fields=Id%2Cdisplay_Id%2CemailResponse": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "orders"
+        ]
+      },
+      "GetAdminPrice-Lists?Q=&Limit=3&Fields=Id%2CtitleResponse": {
+        "type": "object",
+        "properties": {
+          "price_lists": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "price_lists"
+        ]
+      },
+      "GetAdminProduct-Categories?Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "product_categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "product_categories"
+        ]
+      },
+      "GetAdminProduct-Tags?Limit=1000&Offset=0Response": {
+        "type": "object",
+        "properties": {
+          "product_tags": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "product_tags"
+        ]
+      },
+      "GetAdminProduct-Tags?Q=&Limit=3&Fields=Id%2CvalueResponse": {
+        "type": "object",
+        "properties": {
+          "product_tags": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "product_tags"
+        ]
+      },
+      "GetAdminProduct-Types?Limit=1000&Offset=0Response": {
+        "type": "object",
+        "properties": {
+          "product_types": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "product_types"
+        ]
+      },
+      "GetAdminProduct-Types?Q=&Limit=3&Fields=Id%2CvalueResponse": {
+        "type": "object",
+        "properties": {
+          "product_types": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "product_types"
+        ]
+      },
+      "GetAdminProduct-Variants?Q=&Limit=3&Fields=Id%2Ctitle%2Csku%2Cproduct_IdResponse": {
+        "type": "object",
+        "properties": {
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "sku": {
+                  "type": "string"
+                },
+                "product_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "product_id",
+                "sku",
+                "title"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "variants"
+        ]
+      },
+      "GetAdminProducts?Limit=20&Offset=0&Is_Giftcard=False&Fields=Id%2Ctitle%2Chandle%2Cstatus%2C%2Acollection%2C%2Asales_Channels%2Cvariants.Id%2Cthumbnail%2C-Type%2C-Options%2C-Tags%2C-Images%2C-VariantsResponse": {
+        "type": "object",
+        "properties": {
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "handle": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "thumbnail": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "null"
+                },
+                "variants": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  }
+                },
+                "collection": {
+                  "type": "null"
+                },
+                "sales_channels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "object"
+                      },
+                      "name": {
+                        "type": "object"
+                      },
+                      "description": {
+                        "type": "object"
+                      },
+                      "is_disabled": {
+                        "type": "object"
+                      },
+                      "metadata": {
+                        "type": "object"
+                      },
+                      "created_at": {
+                        "type": "object"
+                      },
+                      "updated_at": {
+                        "type": "object"
+                      },
+                      "deleted_at": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "created_at",
+                      "deleted_at",
+                      "description",
+                      "id",
+                      "is_disabled",
+                      "metadata",
+                      "name",
+                      "updated_at"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "collection",
+                "handle",
+                "id",
+                "sales_channels",
+                "status",
+                "thumbnail",
+                "title",
+                "type",
+                "variants"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "products"
+        ]
+      },
+      "GetAdminProducts?Q=&Limit=3&Fields=Id%2Ctitle%2Cthumbnail%2C-Type%2C-Collection%2C-Options%2C-Tags%2C-Images%2C-Variants%2C-Sales_ChannelsResponse": {
+        "type": "object",
+        "properties": {
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "thumbnail": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "null"
+                },
+                "collection": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "collection",
+                "id",
+                "thumbnail",
+                "title",
+                "type"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "products"
+        ]
+      },
+      "GetAdminPromotions?Q=&Limit=3&Fields=Id%2Ccode%2CstatusResponse": {
+        "type": "object",
+        "properties": {
+          "promotions": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "promotions"
+        ]
+      },
+      "GetAdminRegions?Limit=1000&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "regions"
+        ]
+      },
+      "GetAdminRegions?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "regions"
+        ]
+      },
+      "GetAdminReturn-Reasons?Q=&Limit=3&Fields=Id%2Clabel%2CvalueResponse": {
+        "type": "object",
+        "properties": {
+          "return_reasons": {
+            "type": "array"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "return_reasons"
+        ]
+      },
+      "GetAdminSales-Channels?Limit=1000&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "sales_channels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "sales_channels"
+        ]
+      },
+      "GetAdminSales-Channels?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "sales_channels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "sales_channels"
+        ]
+      },
+      "GetAdminShipping-Profiles?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "shipping_profiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "shipping_profiles"
+        ]
+      },
+      "GetAdminStock-Locations?Limit=1000Response": {
+        "type": "object",
+        "properties": {
+          "stock_locations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "metadata": {
+                  "type": "null"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "address_1": {
+                      "type": "string"
+                    },
+                    "address_2": {
+                      "type": "null"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "country_code": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "null"
+                    },
+                    "province": {
+                      "type": "null"
+                    },
+                    "postal_code": {
+                      "type": "null"
+                    },
+                    "metadata": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "address_1",
+                    "address_2",
+                    "city",
+                    "country_code",
+                    "id",
+                    "metadata",
+                    "phone",
+                    "postal_code",
+                    "province"
+                  ]
+                }
+              },
+              "required": [
+                "address",
+                "created_at",
+                "id",
+                "metadata",
+                "name",
+                "updated_at"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "stock_locations"
+        ]
+      },
+      "GetAdminStock-Locations?Q=&Limit=3&Fields=Id%2CnameResponse": {
+        "type": "object",
+        "properties": {
+          "stock_locations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "stock_locations"
+        ]
+      },
+      "GetAdminStoresResponse": {
+        "type": "object",
+        "properties": {
+          "stores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "default_sales_channel_id": {
+                  "type": "string"
+                },
+                "default_region_id": {
+                  "type": "null"
+                },
+                "default_location_id": {
+                  "type": "string"
+                },
+                "metadata": {
+                  "type": "null"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "supported_currencies": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "object"
+                      },
+                      "currency_code": {
+                        "type": "object"
+                      },
+                      "is_default": {
+                        "type": "object"
+                      },
+                      "store_id": {
+                        "type": "object"
+                      },
+                      "created_at": {
+                        "type": "object"
+                      },
+                      "updated_at": {
+                        "type": "object"
+                      },
+                      "deleted_at": {
+                        "type": "object"
+                      },
+                      "currency": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "created_at",
+                      "currency",
+                      "currency_code",
+                      "deleted_at",
+                      "id",
+                      "is_default",
+                      "store_id",
+                      "updated_at"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "created_at",
+                "default_location_id",
+                "default_region_id",
+                "default_sales_channel_id",
+                "id",
+                "metadata",
+                "name",
+                "supported_currencies",
+                "updated_at"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "stores"
+        ]
+      },
+      "GetAdminTax-Regions?Q=&Limit=3&Fields=Id%2Ccountry_Code%2Cprovince_CodeResponse": {
+        "type": "object",
+        "properties": {
+          "tax_regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string"
+                },
+                "province_code": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "country_code",
+                "id",
+                "province_code"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "tax_regions"
+        ]
+      },
+      "GetAdminUsersMeResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "avatar_url": {
+                "type": "null"
+              },
+              "metadata": {
+                "type": "null"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "deleted_at": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "avatar_url",
+              "created_at",
+              "deleted_at",
+              "email",
+              "first_name",
+              "id",
+              "last_name",
+              "metadata",
+              "updated_at"
+            ]
+          }
+        }
+      },
+      "GetAdminUsers?Q=&Limit=3&Fields=Id%2Cemail%2Cfirst_Name%2Clast_NameResponse": {
+        "type": "object",
+        "properties": {
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "first_name",
+                "id",
+                "last_name"
+              ]
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "count",
+          "limit",
+          "offset",
+          "users"
+        ]
+      },
+      "GetCloudAuthResponse": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled"
+        ]
+      },
+      "PostAuthSessionResponse": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "actor_id": {
+                "type": "string"
+              },
+              "actor_type": {
+                "type": "string"
+              },
+              "auth_identity_id": {
+                "type": "string"
+              },
+              "app_metadata": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string"
+                  },
+                  "roles": {
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "roles",
+                  "user_id"
+                ]
+              },
+              "user_metadata": {
+                "type": "object"
+              },
+              "iat": {
+                "type": "integer"
+              },
+              "exp": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "actor_id",
+              "actor_type",
+              "app_metadata",
+              "auth_identity_id",
+              "exp",
+              "iat",
+              "user_metadata"
+            ]
+          }
+        },
+        "required": [
+          "user"
+        ]
+      },
+      "PostAuthUserEmailpassResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:9000",
+      "description": "Captured target"
+    }
+  ]
+}

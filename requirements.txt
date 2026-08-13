@@ -1,0 +1,27 @@
+# Core
+pyyaml>=6.0.1
+requests>=2.31.0
+
+# Browser automation
+playwright>=1.42.0
+
+# LLM / CrewAI
+crewai
+litellm
+
+# Report generation
+pandas>=2.0.0
+openpyxl>=3.1.2
+fpdf2>=2.7.8
+
+# Schema inference and API spec generation
+genson==1.3.0
+openapi-spec-validator==0.7.1
+
+# Security tools
+python-owasp-zap-v2.4
+beautifulsoup4
+
+# Utilities
+colorama>=0.4.6
+httpx

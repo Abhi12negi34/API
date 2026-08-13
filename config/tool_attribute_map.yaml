@@ -1,0 +1,88 @@
+# Tool → USER PASS Attribute Mapping
+# Each tool_key maps to its USER PASS attribute bucket.
+# Tools not listed here are ignored in the scorecard.
+
+usability:
+  - dx_validator
+  - api_doc_clarity
+  - ui_visual_regress
+  - rtl_i18n_audit
+  - error_message_clarity
+  - api_versioning_depreciation
+  - hateoas_compliance
+  - interactive_feedback
+  - localization_ux
+  - ux_consistency
+  - responsive_ux
+
+security:
+  - zap_dast_scan
+  - sql_injection_url
+  - cia_integrity
+  - rbac_access_audit
+  - cors_misconfig
+  - shadow_api
+  - jwt_weak_signatures
+  - bola_idor_detector
+  - oauth2_scoping
+  - data_protection
+  - secure_config
+  - dep_scanner
+  - payload_mutations
+
+reliability:
+  - idempotency
+  - schema_check
+  - coverage_booster
+  - circuit_breaker_resync
+  - fault_mocking
+  - session_security
+  - webhook_ext
+  - retry_jitter_rel
+  - dlq_fuzz_rel
+
+performance:
+  - k6_perf_scale
+  - cold_start_latency
+  - database_n_plus_one
+  - server_profiling
+  - stress_test
+  - spike_test
+  - grpc_perf
+
+accessibility:
+  - axe_accessibility
+  - json_a11y
+  - aria_contracts
+  - keyboard_a11y
+  - contrast_a11y
+  - i18n_a11y
+  - wcag_color_contrast_api
+  - screen_read_a11y
+
+scalability:
+  - throughput_scale
+  - horizontal_scale
+  - compression_eff
+  - bottleneck_scale
+  - cdn_latency_scale
+  - token_buck_scale
+  - cache_sync_scale
+
+efficiency:
+  - data_efficiency
+  - payload_compression
+  - graphql_query_cost
+  - http2_eff
+  - n_plus_one_eff
+  - web_vitals_eff
+  - cache_hit_eff
+
+stability:
+  - regression_test
+  - race_conditions
+  - memory_leak_stab
+  - degradation_stab
+  - thread_pool_stab
+  - chaos_stab
+  - mem_bloat_stab

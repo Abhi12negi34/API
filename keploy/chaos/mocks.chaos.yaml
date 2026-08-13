@@ -1,0 +1,1322 @@
+mocks:
+- method: GET
+  path: /api/v1/admin/analytics
+  original_path: /api/v1/admin/analytics
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - categoryDemand
+  - categoryDemand[].name
+  - categoryDemand[].value
+  - cityData
+  - cityData[].city
+  - cityData[].sales
+  - distributorSLA
+  - distributorSLA[].distributor
+  - distributorSLA[].sla
+  - qrFunnel
+  - qrFunnel[].name
+  - qrFunnel[].value
+  - salesTrend
+  - salesTrend[].name
+  - salesTrend[].orders
+  - salesTrend[].total
+  - stats
+  - stats.active_chemists
+  - stats.active_distributors
+  - stats.total_gmv
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/audit
+  original_path: /api/v1/admin/audit
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/chemists?skip=0&limit=-1
+  original_path: /api/v1/admin/chemists?skip=0&limit=-1
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].aov
+  - data[].assigned_distributor
+  - data[].city
+  - data[].conversions
+  - data[].coupon_code
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.cancelled_cheque
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].pincode
+  - data[].qr_code
+  - data[].sales
+  - data[].site_visits
+  - data[].state
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/chemists?skip=0&limit=10
+  original_path: /api/v1/admin/chemists?skip=0&limit=10
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].aov
+  - data[].assigned_distributor
+  - data[].city
+  - data[].conversions
+  - data[].coupon_code
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.cancelled_cheque
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].pincode
+  - data[].qr_code
+  - data[].sales
+  - data[].site_visits
+  - data[].state
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 5
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/commissions/settings
+  original_path: /api/v1/admin/commissions/settings
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/distributors?skip=0&limit=-1
+  original_path: /api/v1/admin/distributors?skip=0&limit=-1
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].active_chemists
+  - data[].address
+  - data[].aov
+  - data[].assigned_chemists_list
+  - data[].assigned_chemists_list[].id
+  - data[].assigned_chemists_list[].name
+  - data[].conversions
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].inventory_value
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].rating
+  - data[].region
+  - data[].sla
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/distributors?skip=0&limit=10
+  original_path: /api/v1/admin/distributors?skip=0&limit=10
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].active_chemists
+  - data[].address
+  - data[].aov
+  - data[].assigned_chemists_list
+  - data[].assigned_chemists_list[].id
+  - data[].assigned_chemists_list[].name
+  - data[].conversions
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].inventory_value
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].rating
+  - data[].region
+  - data[].sla
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 5
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/orders?skip=0&limit=10
+  original_path: /api/v1/admin/orders?skip=0&limit=10
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].amount
+  - data[].chemist_id
+  - data[].customer
+  - data[].date
+  - data[].db_id
+  - data[].id
+  - data[].product
+  - data[].status
+  - total
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/products?skip=0&limit=10
+  original_path: /api/v1/admin/products?skip=0&limit=10
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].category
+  - data[].delivery_days
+  - data[].description
+  - data[].gst_rate
+  - data[].hsn_code
+  - data[].id
+  - data[].image_url
+  - data[].inStock
+  - data[].is_active
+  - data[].landing_price
+  - data[].mrp
+  - data[].name
+  - data[].original_image_url
+  - data[].rating
+  - data[].rental_price
+  - data[].replacement_days
+  - data[].sku
+  - data[].specifications
+  - data[].warehouse_pickup_discount
+  - data[].warranty_months
+  - total
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/qr-analytics
+  original_path: /api/v1/admin/qr-analytics
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - funnel
+  - funnel[].percentage
+  - funnel[].stage
+  - funnel[].value
+  - rows
+  - rows[].chemist
+  - rows[].conv
+  - rows[].encoded_url
+  - rows[].id
+  - rows[].orders
+  - rows[].scans
+  - rows[].status
+  - stats
+  - stats.avg_conv
+  - stats.total_orders
+  - stats.total_qrs
+  - stats.total_scans
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/tiers
+  original_path: /api/v1/admin/tiers
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].description
+  - data[].id
+  - data[].is_active
+  - data[].max_orders
+  - data[].min_orders
+  - data[].name
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/users?skip=0&limit=10
+  original_path: /api/v1/admin/users?skip=0&limit=10
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - data
+  - data[].created_at
+  - data[].email
+  - data[].id
+  - data[].last_login
+  - data[].name
+  - data[].role
+  - data[].status
+  - total
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/catalog/categories
+  original_path: /api/v1/catalog/categories
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/catalog/products
+  original_path: /api/v1/catalog/products
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/commissions/pending
+  original_path: /api/v1/commissions/pending
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/notifications
+  original_path: /api/v1/notifications
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 16.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/reports/admin/stats
+  original_path: /api/v1/reports/admin/stats
+  is_templated: false
+  request:
+    body:
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - cgst
+  - failed_orders
+  - gmv
+  - pending_commissions
+  - pre_tax_base
+  - settled_commissions
+  - sgst
+  - sla_compliance
+  - total_orders
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /src/components/auth-shell.tsx
+  original_path: /src/components/auth-shell.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/lib/auth.ts
+  original_path: /src/lib/auth.ts
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 63.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.analytics.tsx
+  original_path: /src/routes/admin.analytics.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 47.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.analytics.tsx?tsr-split=component
+  original_path: /src/routes/admin.analytics.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.audit.tsx
+  original_path: /src/routes/admin.audit.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.audit.tsx?tsr-split=component
+  original_path: /src/routes/admin.audit.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.chemists.tsx
+  original_path: /src/routes/admin.chemists.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.chemists.tsx?tsr-split=component
+  original_path: /src/routes/admin.chemists.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.commissions.tsx
+  original_path: /src/routes/admin.commissions.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.commissions.tsx?tsr-split=component
+  original_path: /src/routes/admin.commissions.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.coupons.tsx
+  original_path: /src/routes/admin.coupons.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.distributors.tsx
+  original_path: /src/routes/admin.distributors.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.distributors.tsx?tsr-split=component
+  original_path: /src/routes/admin.distributors.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.finance.tsx
+  original_path: /src/routes/admin.finance.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.finance.tsx?tsr-split=component
+  original_path: /src/routes/admin.finance.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.index.tsx
+  original_path: /src/routes/admin.index.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 78.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.index.tsx?tsr-split=component
+  original_path: /src/routes/admin.index.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.login.tsx
+  original_path: /src/routes/admin.login.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.login.tsx?tsr-split=component
+  original_path: /src/routes/admin.login.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.notifications.tsx
+  original_path: /src/routes/admin.notifications.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.notifications.tsx?tsr-split=component
+  original_path: /src/routes/admin.notifications.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.onboard-partners.tsx
+  original_path: /src/routes/admin.onboard-partners.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.onboard-partners.tsx?tsr-split=component
+  original_path: /src/routes/admin.onboard-partners.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.products.tsx
+  original_path: /src/routes/admin.products.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.products.tsx?tsr-split=component
+  original_path: /src/routes/admin.products.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.qr.tsx
+  original_path: /src/routes/admin.qr.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.qr.tsx?tsr-split=component
+  original_path: /src/routes/admin.qr.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.settings.tsx
+  original_path: /src/routes/admin.settings.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.support.tsx
+  original_path: /src/routes/admin.support.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tiers.tsx
+  original_path: /src/routes/admin.tiers.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 78.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tsx
+  original_path: /src/routes/admin.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 219.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tsx?tsr-split=component
+  original_path: /src/routes/admin.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 15.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.users.tsx
+  original_path: /src/routes/admin.users.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 78.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.users.tsx?tsr-split=component
+  original_path: /src/routes/admin.users.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/order-success.tsx
+  original_path: /src/routes/order-success.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 219.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/product.$id.tsx
+  original_path: /src/routes/product.$id.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 62.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/products.tsx
+  original_path: /src/routes/products.tsx
+  is_templated: false
+  request:
+    body:
+    content_type: ''
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms: 219.0
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: POST
+  path: /api/v1/auth/admin/login
+  original_path: /api/v1/auth/admin/login
+  is_templated: false
+  request:
+    body:
+      email: aditya.pandey@vvnt.in
+      password: 12*************a.
+    content_type: application/json
+  response:
+    status: 503
+    body: '{"invalid_json": true'
+    content_type: application/json
+    median_latency_ms:
+    status_code: 503
+    delay_ms: 750
+    delay: 750ms
+  schema_fingerprint:
+  - access_token
+  - authenticated
+  - email
+  - refresh_token
+  - requires_2fa
+  - role
+  - status
+  - token_type
+  - user_id
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200

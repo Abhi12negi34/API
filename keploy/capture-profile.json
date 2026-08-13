@@ -1,0 +1,46 @@
+{
+  "capture_mode": "proxy",
+  "execution_mode": "SIMULATED",
+  "command": "keploy record --proxy-mode",
+  "target_url": "https://www.myntra.com/",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "root": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy",
+  "notes": [
+    "Discovery artifacts are loaded from the local keploy/tests/keploy directory.",
+    "Windows-native runs automatically fall back to proxy mode."
+  ],
+  "discovery_source_files": [
+    "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml",
+    "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\openapi-generated-traces.yaml",
+    "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\traffic-inventory.yaml",
+    "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\traffic\\traffic-inventory.json"
+  ],
+  "discovered_api_count": 6,
+  "inventory_summary": {
+    "discovered_api_count": 6,
+    "traffic_request_count": 2,
+    "excluded_request_count": 1136,
+    "foreign_host_request_count": 367,
+    "static_asset_request_count": 588,
+    "page_route_request_count": 181,
+    "unique_hosts": [
+      "www.myntra.com"
+    ],
+    "observed_hosts": [
+      "www.indiapost.gov.in",
+      "www.myntra.com",
+      "www.w3schools.com"
+    ],
+    "source_files": [
+      "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml",
+      "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\openapi-generated-traces.yaml",
+      "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\traffic-inventory.yaml",
+      "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\traffic\\traffic-inventory.json"
+    ],
+    "request_kind_counts": {
+      "foreign_host": 367,
+      "page_route": 181,
+      "static_asset": 588
+    }
+  }
+}

@@ -1,0 +1,889 @@
+{
+    "report_metadata": {
+        "generated_at": "2026-04-03T11:40:02.318668",
+        "agent_version": "2.4.0 (World-Class Elite Edition)",
+        "target_url": "https://www.myntra.com/",
+        "certification_tier": "SILVER-AWAITING FIXES",
+        "final_weighted_score": 89.28,
+        "active_resilience_index": 65.0
+    },
+    "service_mesh_discovery": {
+        "total_apis_discovered": 12,
+        "baseline": [
+            {
+                "method": "GET",
+                "path": "/api/v1/auth/session",
+                "status": 200,
+                "description": "User Session Retrieval",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "POST",
+                "path": "/api/v1/orders/checkout",
+                "status": 201,
+                "description": "Transactional Order Checkout",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "GET",
+                "path": "/api/v1/products/list",
+                "status": 200,
+                "description": "Public Catalog Discovery",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "PUT",
+                "path": "/api/v1/user/profile",
+                "status": 204,
+                "description": "Profile Metadata Mutator",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "DELETE",
+                "path": "/api/v1/cart/item",
+                "status": 200,
+                "description": "Shopping Cart Item Ejection",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "GET",
+                "path": "/v1/admin/sync",
+                "status": 403,
+                "description": "Admin Background Sync (Undocumented Shadow API)",
+                "capture_mode": "proxy",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "GET",
+                "path": "/api/v1/auth/session",
+                "status": 200,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "POST",
+                "path": "/api/v1/orders/checkout",
+                "status": 201,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "GET",
+                "path": "/api/v1/products/list",
+                "status": 200,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "PUT",
+                "path": "/api/v1/user/profile",
+                "status": 204,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "DELETE",
+                "path": "/api/v1/cart/item",
+                "status": 200,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            },
+            {
+                "method": "GET",
+                "path": "/v1/admin/sync",
+                "status": 403,
+                "description": "Discovered Interface",
+                "capture_mode": "file",
+                "target_url": "https://www.myntra.com/",
+                "source_file": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\discovery-baseline.yaml"
+            }
+        ]
+    },
+    "executive_metric_summary": {
+        "total_tools_executed": 61,
+        "total_passed": 48,
+        "total_failed": 13,
+        "total_skipped": 0,
+        "total_blockers": 4,
+        "pass_ratio_percent": 78.69
+    },
+    "user_pass_scorecard_breakdown": {
+        "usability": {
+            "score_percent": 90.0,
+            "weight": 0.1,
+            "tools_passed": 5,
+            "tools_failed": 3,
+            "tools_skipped": 0,
+            "blocker_count": 0,
+            "verdict": "FAIL"
+        },
+        "security": {
+            "score_percent": 81.1,
+            "weight": 0.2,
+            "tools_passed": 7,
+            "tools_failed": 2,
+            "tools_skipped": 0,
+            "blocker_count": 2,
+            "verdict": "FAIL"
+        },
+        "efficiency": {
+            "score_percent": 88.6,
+            "weight": 0.05,
+            "tools_passed": 5,
+            "tools_failed": 2,
+            "tools_skipped": 0,
+            "blocker_count": 0,
+            "verdict": "FAIL"
+        },
+        "reliability": {
+            "score_percent": 100.0,
+            "weight": 0.15,
+            "tools_passed": 9,
+            "tools_failed": 0,
+            "tools_skipped": 0,
+            "blocker_count": 0,
+            "verdict": "PASS"
+        },
+        "performance": {
+            "score_percent": 90.0,
+            "weight": 0.15,
+            "tools_passed": 6,
+            "tools_failed": 1,
+            "tools_skipped": 0,
+            "blocker_count": 1,
+            "verdict": "FAIL"
+        },
+        "accessibility": {
+            "score_percent": 81.2,
+            "weight": 0.1,
+            "tools_passed": 5,
+            "tools_failed": 3,
+            "tools_skipped": 0,
+            "blocker_count": 1,
+            "verdict": "FAIL"
+        },
+        "scalability": {
+            "score_percent": 86.7,
+            "weight": 0.15,
+            "tools_passed": 4,
+            "tools_failed": 2,
+            "tools_skipped": 0,
+            "blocker_count": 0,
+            "verdict": "FAIL"
+        },
+        "stability": {
+            "score_percent": 100.0,
+            "weight": 0.1,
+            "tools_passed": 7,
+            "tools_failed": 0,
+            "tools_skipped": 0,
+            "blocker_count": 0,
+            "verdict": "PASS"
+        }
+    },
+    "detailed_findings_by_attribute": {
+        "usability": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "dx_validator",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/auth",
+                    "diagnostic_log": "[SIMULATION] No rate limiting triggered in 20 requests. Rate limiting may not be configured or threshold is very high.",
+                    "remediation_guidance": "Configure rate limiting on auth endpoints (recommend: 10 req/min). Use 429 + Retry-After."
+                },
+                {
+                    "tool_id": "error_message_clarity",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "LOW",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Non-RFC 7807 error responses on: /api/v1/nonexistent-endpoint-xyz (missing: type, title, status, detail, Content-Type: text/html); /api/v1/user/invalid-id-99999 (missing: type, title, status, detail, Content-Type: text/html).",
+                    "remediation_guidance": "Return application/problem+json with 'type', 'title', 'status', 'detail' fields on all 4xx errors."
+                },
+                {
+                    "tool_id": "api_versioning_depreciation",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/api/v1/",
+                    "diagnostic_log": "No Sunset or Deprecation headers found on v1 endpoints checked: /api/v1/, /api/v1/health, /api/v1/auth, /v1/.",
+                    "remediation_guidance": "Add 'Sunset' header (RFC 8594) on deprecated API versions so clients can plan migration."
+                },
+                {
+                    "tool_id": "hateoas_compliance",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "LOW",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "No _links or Link headers found on endpoints: /api/v1/, /api/v1/products, /api/v1/orders, /api/v1/user. API is not self-discoverable.",
+                    "remediation_guidance": "Add HAL-style '_links' to responses or RFC 8288 Link headers to improve API discoverability."
+                },
+                {
+                    "tool_id": "interactive_feedback",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[interactive_feedback] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "localization_ux",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[localization_ux] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "ux_consistency",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[ux_consistency] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "responsive_ux",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[responsive_ux] Check passed.",
+                    "remediation_guidance": "N/A"
+                }
+            ]
+        },
+        "security": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "zap_dast_scan",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[SIMULATION] ZAP daemon not reachable. Basic header inspection passed instead.",
+                    "remediation_guidance": "Install and start OWASP ZAP for full DAST coverage."
+                },
+                {
+                    "tool_id": "shadow_api",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Probed 16 common shadow API paths. 0 accessible, none flagged as dangerous.",
+                    "remediation_guidance": "N/A. Continue periodic shadow API scans as new routes are added."
+                },
+                {
+                    "tool_id": "data_protection",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "SIMULATED",
+                    "severity": "CRITICAL",
+                    "impacted_path": "C:\\Users\\VVnT\\ai-api-testing-agent",
+                    "diagnostic_log": "PII LEAKS DETECTED: Credit Card detected in https://www.myntra.com/ (1 match); Email (raw) detected in https://www.myntra.com/ (1 match)",
+                    "remediation_guidance": "Mask or redact all PII fields before serializing API responses. Apply output filtering middleware and sanitize Keploy recordings."
+                },
+                {
+                    "tool_id": "secure_config",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "HIGH",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Missing security headers: Strict-Transport-Security (HSTS missing \u2014 browsers won't enforce HTTPS), X-Frame-Options (Clickjacking protection missing), X-Content-Type-Options (MIME sniffing attack vector open), Referrer-Policy (Referrer leakage possible). Present: Content-Security-Policy.",
+                    "remediation_guidance": "Add all OWASP recommended security response headers. See https://www.myntra.com/www-project-secure-headers/"
+                },
+                {
+                    "tool_id": "dep_scanner",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "Python Environment [requirements.txt]",
+                    "diagnostic_log": "All 275 installed packages checked. No known CVEs detected in offline database.",
+                    "remediation_guidance": "N/A. Run `pip-audit` periodically for full online CVE coverage."
+                },
+                {
+                    "tool_id": "jwt_weak_signatures",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[SIMULATION] No JWKS endpoint found at common paths. Cannot verify JWT algorithm strength.",
+                    "remediation_guidance": "Expose a JWKS endpoint at /.well-known/jwks.json for public key verification."
+                },
+                {
+                    "tool_id": "bola_idor_detector",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Tested 6 ID-based endpoints. All returned 401/403/404 without authentication \u2014 no IDOR exposure detected.",
+                    "remediation_guidance": "N/A. Continue testing with authenticated user-swapping scenarios for deeper BOLA coverage."
+                },
+                {
+                    "tool_id": "oauth2_scoping",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[SIMULATION] No OAuth2 discovery endpoint found. Cannot verify token scoping configuration.",
+                    "remediation_guidance": "Expose /.well-known/openid-configuration for OAuth2 introspection. Ensure scopes follow principle of least privilege."
+                },
+                {
+                    "tool_id": "payload_mutations",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/search",
+                    "diagnostic_log": "All 4 attack payloads blocked or sanitized correctly \u2014 no reflection or 500 errors triggered.",
+                    "remediation_guidance": "N/A. Continue expanding fuzz corpus with OWASP SecLists payloads."
+                }
+            ]
+        },
+        "efficiency": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "data_efficiency",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[data_efficiency] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "payload_compression",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Response compressed with 'gzip'. Content-Length: 50909.",
+                    "remediation_guidance": "N/A. Consider Brotli (br) for ~15% better compression than GZIP on text payloads."
+                },
+                {
+                    "tool_id": "graphql_query_cost",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/graphql",
+                    "diagnostic_log": "[SIMULATION] No GraphQL endpoint found at /graphql. Not applicable for this target.",
+                    "remediation_guidance": "If using GraphQL, add query cost analysis middleware."
+                },
+                {
+                    "tool_id": "http2_eff",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "HTTP/1.1 detected (raw version=11). Alt-Svc='', Upgrade=''. Multiplexing unavailable.",
+                    "remediation_guidance": "Enable HTTP/2 via TLS ALPN negotiation in Nginx (listen 443 ssl http2) or your reverse proxy config."
+                },
+                {
+                    "tool_id": "n_plus_one_eff",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[n_plus_one_eff] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "web_vitals_eff",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[web_vitals_eff] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "cache_hit_eff",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "No cache hits in 3 consecutive identical requests. Request 1: X-Cache=, Cache-Control=public, max-age=3234, ETag=absent; Request 2: X-Cache=, Cache-Control=public, max-age=3234, ETag=absent; Request 3: X-Cache=, Cache-Control=public, max-age=3234, ETag=absent.",
+                    "remediation_guidance": "Configure CDN or reverse proxy caching. Add Cache-Control, ETag, and Age headers to cacheable responses."
+                }
+            ]
+        },
+        "reliability": {
+            "attribute_verdict": "PASS",
+            "findings": [
+                {
+                    "tool_id": "fault_mocking",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[fault_mocking] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "schema_check",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[schema_check] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "coverage_booster",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\tests\\keploy\\openapi-generated-traces.yaml",
+                    "diagnostic_log": "OpenAPI schema not found. Generated 12 golden trace(s) from the discovery baseline fallback.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "idempotency",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[idempotency] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "circuit_breaker_resync",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/health",
+                    "diagnostic_log": "Health endpoint consistently returned 200 across 0 requests. Circuit breaker appears Closed (stable).",
+                    "remediation_guidance": "N/A. Configure alerting for circuit breaker state transitions."
+                },
+                {
+                    "tool_id": "session_security",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[session_security] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "webhook_ext",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[webhook_ext] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "retry_jitter_rel",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[retry_jitter_rel] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "dlq_fuzz_rel",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[SIMULATION] No webhook/callback endpoints found. DLQ testing not applicable.",
+                    "remediation_guidance": "Configure Dead Letter Queue for all async message consumers to handle poison pills gracefully."
+                }
+            ]
+        },
+        "performance": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "k6_perf_scale",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[k6_perf_scale] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "cold_start_latency",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/health",
+                    "diagnostic_log": "Cold start TTFB = 140.0ms on https://www.myntra.com/api/v1/health. Within 2000ms threshold.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "server_profiling",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/health",
+                    "diagnostic_log": "P95 latency = 187.0ms, avg = 157.8ms \u2014 within threshold. No Server-Timing header present.",
+                    "remediation_guidance": "N/A. Add Server-Timing headers for richer backend observability."
+                },
+                {
+                    "tool_id": "database_n_plus_one",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "HIGH",
+                    "impacted_path": "https://www.myntra.com/v2/orders/details",
+                    "diagnostic_log": "FAILURE: Trace analysis of GET /v2/orders/details revealed 15 SQL SELECT calls for a single batch payload.",
+                    "remediation_guidance": "Use Eager Loading (.includes() or .select_related()) on your ORM call for order-line-items."
+                },
+                {
+                    "tool_id": "stress_test",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[stress_test] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "spike_test",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[spike_test] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "grpc_perf",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[grpc_perf] Check passed.",
+                    "remediation_guidance": "N/A"
+                }
+            ]
+        },
+        "accessibility": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "axe_accessibility",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[axe_accessibility] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "json_a11y",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[json_a11y] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "aria_contracts",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[aria_contracts] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "keyboard_a11y",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[keyboard_a11y] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "contrast_a11y",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[contrast_a11y] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "i18n_a11y",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Content-Language header absent for all probed locales: en-US, ar, zh-CN, fr-FR.",
+                    "remediation_guidance": "Return Content-Language header matching Accept-Language. Support at minimum EN, AR (RTL), and ZH for global accessibility."
+                },
+                {
+                    "tool_id": "wcag_color_contrast_api",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "HIGH",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[wcag_color_contrast_api] Tool raised exception: name 'audit_wcag_color_contrast_api' is not defined",
+                    "remediation_guidance": "Investigate tool [wcag_color_contrast_api] - check imports and dependencies."
+                },
+                {
+                    "tool_id": "screen_read_a11y",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "Dynamic endpoints exceed screen-reader latency threshold (300ms): /api/v1/notifications \u2192 360.0ms (>300ms); /api/v1/feed \u2192 437.0ms (>300ms); /api/v1/updates \u2192 453.0ms (>300ms).",
+                    "remediation_guidance": "Optimize dynamic content endpoints to respond in <300ms. Debounce React state updates before triggering aria-live region refreshes."
+                }
+            ]
+        },
+        "scalability": {
+            "attribute_verdict": "FAIL",
+            "findings": [
+                {
+                    "tool_id": "throughput_scale",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[throughput_scale] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "horizontal_scale",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[horizontal_scale] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "bottleneck_scale",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[bottleneck_scale] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "cdn_latency_scale",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "No CDN headers detected on https://www.myntra.com/. Traffic may not be routed through a CDN.",
+                    "remediation_guidance": "Route traffic through a CDN (Cloudflare, Fastly, CloudFront) for global latency reduction and DDoS protection."
+                },
+                {
+                    "tool_id": "token_buck_scale",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/search",
+                    "diagnostic_log": "Rate limit behavior: 0 429s in 30 requests. Retry-After: N/A (no 429 triggered).",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "cache_sync_scale",
+                    "success": false,
+                    "status": "FAIL",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/api/v1/products",
+                    "diagnostic_log": "No ETag or Last-Modified headers on https://www.myntra.com/api/v1/products. Cannot verify cache sync. Client-side caching not supported.",
+                    "remediation_guidance": "Add ETag and Last-Modified headers to all cacheable API responses to enable conditional request caching."
+                }
+            ]
+        },
+        "stability": {
+            "attribute_verdict": "PASS",
+            "findings": [
+                {
+                    "tool_id": "regression_test",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[regression_test] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "race_conditions",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[race_conditions] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "memory_leak_stab",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[memory_leak_stab] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "degradation_stab",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/",
+                    "diagnostic_log": "[degradation_stab] Check passed.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "thread_pool_stab",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "MEDIUM",
+                    "impacted_path": "https://www.myntra.com/api/v1/health",
+                    "diagnostic_log": "Thread pool stress (50 concurrent): 0 OK (0.0%), 0 timeout (0.0%), 50 error.",
+                    "remediation_guidance": "Investigate partial failures under concurrency. Profile thread utilization."
+                },
+                {
+                    "tool_id": "chaos_stab",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "LIVE",
+                    "severity": "HIGH",
+                    "impacted_path": "C:\\Users\\VVnT\\ai-api-testing-agent\\keploy\\chaos\\mocks.chaos.yaml",
+                    "diagnostic_log": "Chaos fuzzed 1 mock file(s) using scenario 'mixed': corrupted_json_body, delay=750ms, status_code=503.",
+                    "remediation_guidance": "N/A"
+                },
+                {
+                    "tool_id": "mem_bloat_stab",
+                    "success": true,
+                    "status": "PASS",
+                    "mode": "SIMULATED",
+                    "severity": "INFO",
+                    "impacted_path": "https://www.myntra.com/api/v1/import",
+                    "diagnostic_log": "[SIMULATION] Import endpoint unreachable. Payload size limit testing skipped.",
+                    "remediation_guidance": "Configure payload size limits at API gateway and application middleware levels."
+                }
+            ]
+        }
+    },
+    "active_resilience_matrix": {
+        "capture_profile": {},
+        "coverage_booster": {
+            "source_path": null,
+            "generated_trace_count": 0,
+            "generated_traces": [],
+            "output_path": null,
+            "log": null
+        },
+        "chaos_profile": {
+            "mutated_files": [],
+            "mutations_applied": [],
+            "scenario": null,
+            "log": null
+        },
+        "pii_audit": {
+            "files_scanned": 0,
+            "leaks_found": [],
+            "log": null
+        },
+        "behavioral_drift": {
+            "baseline_source": null,
+            "behavioral_similarity_percent": 100.0,
+            "behavioral_drift_percent": 0.0,
+            "matched_tools": 0,
+            "changed_tools": 0,
+            "new_tools": 0,
+            "missing_tools": 0,
+            "log": null
+        },
+        "resilience_index": 65.0
+    }
+}

@@ -1,0 +1,73 @@
+# AI API Testing Agent Configuration
+
+keploy:
+  capture_mode: true
+  mock_dependencies: true
+  bypass_auth_for_record: false
+
+zaproxy:
+  api_key: "default_zap_key"
+  target_url: "localhost"
+  port: 8080
+
+k6:
+  vus: 100
+  duration: "30s"
+
+playwright:
+  # Set headless to false when you want to watch the browser navigate the site.
+  headless: false
+  slow_mo_ms: 0
+  devtools: false
+  capture_trace: false
+  capture_screenshots: false
+  aggressive_discovery: false
+  # --- All crawl parameters (single source of truth) ---
+  max_pages: 100           # hard ceiling on pages visited
+  max_links: 50            # links collected per page
+  max_clicks: 10           # interaction clicks per page
+  time_budget_s: 1200      # max seconds for entire crawl
+  stable_page_limit: 5     # stop after N pages with 0 new requests (more lenient)
+  probe_ceiling: 200       # max API endpoint probes
+
+ollama:
+  host: "http://192.168.0.49:11434"
+  model: "ollama/gemma3:27b"
+
+auth:
+  # Leave enabled false if the target is public or you want to reuse a stored session only.
+  enabled: true
+  login_url: ""
+  # Fill either the config values below with literal credentials or set the matching environment variables.
+  username_env: PLAYWRIGHT_USERNAME
+  email_env: PLAYWRIGHT_EMAIL
+  password_env: PLAYWRIGHT_PASSWORD
+  username: ""
+  password: "1234567890Aditya."
+  # Optional fallback if the site only exposes a username/email-first flow.
+  email: "aditya.pandey@vvnt.in"
+  success_selector: ""
+  post_login_url_contains: ""
+  storage_state_path: "reports/playwright-storage-state.json"
+  reuse_storage_state: false
+  manual_login: false
+  require_auth: true
+  login_timeout_ms: 45000
+  post_login_wait_ms: 3000
+  manual_login_wait_ms: 120000
+
+prometheus:
+  endpoint: "http://localhost:9090"
+
+weights:
+  security: 0.20
+  reliability: 0.15
+  performance: 0.15
+  scalability: 0.15
+  stability: 0.10
+  usability: 0.10
+  accessibility: 0.10
+  efficiency: 0.05
+
+# Limit which USER PASS categories run. Leave empty to run all.
+run_categories: []

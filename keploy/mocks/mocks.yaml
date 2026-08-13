@@ -1,0 +1,4143 @@
+mocks:
+- method: GET
+  path: /api/v1/admin/analytics
+  original_path: /api/v1/admin/analytics
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      salesTrend:
+      - name: Mar
+        total: 0.0
+        orders: 0
+      - name: Apr
+        total: 0.0
+        orders: 0
+      - name: May
+        total: 0.0
+        orders: 0
+      - name: Jun
+        total: 213269.04
+        orders: 24
+      - name: Jul
+        total: 15130.0
+        orders: 1
+      - name: Aug
+        total: 0.0
+        orders: 0
+      qrFunnel:
+      - name: Cards Distributed
+        value: 11
+      - name: QR Scans
+        value: 111
+      - name: Store Visits
+        value: 111
+      - name: Purchases
+        value: 8
+      cityData:
+      - city: Agra
+        sales: 102207.9
+      - city: Hdcgj
+        sales: 57665.4
+      - city: Noida
+        sales: 19730.0
+      - city: Delhi
+        sales: 18506.7
+      - city: Varanasi
+        sales: 15130.0
+      - city: Duduq
+        sales: 11108.0
+      - city: Wr
+        sales: 4051.0
+      categoryDemand:
+      - name: Wheelchair
+        value: 179042.0
+      - name: Canes
+        value: 16500.0
+      - name: Diagnostics
+        value: 2400.0
+      distributorSLA:
+      - distributor: manik
+        sla: 100.0
+      - distributor: Founder_ABC
+        sla: 100.0
+      - distributor: Founder_ABC
+        sla: 100.0
+      - distributor: 'VVnt '
+        sla: 100.0
+      - distributor: VVnt Foundation
+        sla: 100.0
+      - distributor: distributor-12
+        sla: 100.0
+      - distributor: Pradeep Yadav
+        sla: 100.0
+      - distributor: 'xyz '
+        sla: 100.0
+      - distributor: VVnT Sequor
+        sla: 100.0
+      - distributor: Ab Meds
+        sla: 100.0
+      stats:
+        total_gmv: 228399.04
+        active_chemists: 11
+        active_distributors: 10
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint:
+  - categoryDemand
+  - categoryDemand[].name
+  - categoryDemand[].value
+  - cityData
+  - cityData[].city
+  - cityData[].sales
+  - distributorSLA
+  - distributorSLA[].distributor
+  - distributorSLA[].sla
+  - qrFunnel
+  - qrFunnel[].name
+  - qrFunnel[].value
+  - salesTrend
+  - salesTrend[].name
+  - salesTrend[].orders
+  - salesTrend[].total
+  - stats
+  - stats.active_chemists
+  - stats.active_distributors
+  - stats.total_gmv
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/audit
+  original_path: /api/v1/admin/audit
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+    - id: L-108
+      time: 2026-07-31 08:56
+      user: aditya.pandey@vvnt.in
+      action: Updated support ticket
+      target: TKT-10
+      ip: 127.0.0.1
+    - id: L-107
+      time: 2026-07-31 08:54
+      user: aditya.pandey@vvnt.in
+      action: Updated support ticket
+      target: TKT-9
+      ip: 127.0.0.1
+    - id: L-106
+      time: 2026-07-31 08:54
+      user: aditya.pandey@vvnt.in
+      action: Deleted support ticket
+      target: adfg
+      ip: 127.0.0.1
+    - id: L-105
+      time: 2026-07-31 08:53
+      user: aditya.pandey@vvnt.in
+      action: Updated support ticket
+      target: asdfg
+      ip: 127.0.0.1
+    - id: L-104
+      time: 2026-07-31 08:53
+      user: aditya.pandey@vvnt.in
+      action: Deleted support ticket
+      target: create
+      ip: 127.0.0.1
+    - id: L-103
+      time: 2026-07-31 08:53
+      user: aditya.pandey@vvnt.in
+      action: Created support ticket
+      target: create
+      ip: 127.0.0.1
+    - id: L-102
+      time: 2026-07-31 08:53
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: upi_auto_capture
+      ip: 127.0.0.1
+    - id: L-101
+      time: 2026-07-31 08:53
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: upi_auto_capture
+      ip: 127.0.0.1
+    - id: L-100
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: custom_branding_enabled
+      ip: 127.0.0.1
+    - id: L-99
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: custom_branding_enabled
+      ip: 127.0.0.1
+    - id: L-98
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: require_2fa_for_admins
+      ip: 127.0.0.1
+    - id: L-97
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: require_2fa_for_admins
+      ip: 127.0.0.1
+    - id: L-96
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: require_2fa_for_admins
+      ip: 127.0.0.1
+    - id: L-95
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: require_2fa_for_admins
+      ip: 127.0.0.1
+    - id: L-94
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: require_2fa_for_admins
+      ip: 127.0.0.1
+    - id: L-93
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: ip_allowlist_enabled
+      ip: 127.0.0.1
+    - id: L-92
+      time: 2026-07-31 08:52
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: ip_allowlist_enabled
+      ip: 127.0.0.1
+    - id: L-91
+      time: 2026-07-31 08:45
+      user: aditya.pandey@vvnt.in
+      action: Created product
+      target: cane
+      ip: 127.0.0.1
+    - id: L-90
+      time: 2026-07-31 08:44
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-89
+      time: 2026-07-31 08:44
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-88
+      time: 2026-07-31 08:44
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-87
+      time: 2026-07-31 08:44
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-86
+      time: 2026-07-31 08:43
+      user: aditya.pandey@vvnt.in
+      action: Toggled distributor status to inactive
+      target: 'xyz '
+      ip: 127.0.0.1
+    - id: L-85
+      time: 2026-07-31 08:43
+      user: aditya.pandey@vvnt.in
+      action: Rejected distributor KYC
+      target: Ab Meds
+      ip: 127.0.0.1
+    - id: L-84
+      time: 2026-07-31 08:43
+      user: aditya.pandey@vvnt.in
+      action: Approved distributor KYC
+      target: VVnT Sequor
+      ip: 127.0.0.1
+    - id: L-83
+      time: 2026-07-31 08:43
+      user: aditya.pandey@vvnt.in
+      action: Approved chemist KYC
+      target: Pharmacy
+      ip: 127.0.0.1
+    - id: L-82
+      time: 2026-07-31 08:42
+      user: aditya.pandey@vvnt.in
+      action: Toggled chemist status to active
+      target: Noida
+      ip: 127.0.0.1
+    - id: L-81
+      time: 2026-07-31 08:42
+      user: aditya.pandey@vvnt.in
+      action: Toggled chemist status to inactive
+      target: Noida
+      ip: 127.0.0.1
+    - id: L-80
+      time: 2026-07-30 11:22
+      user: aditya.pandey@vvnt.in
+      action: Toggled distributor status to inactive
+      target: manik
+      ip: 127.0.0.1
+    - id: L-79
+      time: 2026-07-30 11:21
+      user: aditya.pandey@vvnt.in
+      action: Toggled distributor status to inactive
+      target: Founder_ABC
+      ip: 127.0.0.1
+    - id: L-78
+      time: 2026-07-13 04:53
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-77
+      time: 2026-07-13 04:53
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-76
+      time: 2026-07-13 04:52
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-75
+      time: 2026-07-13 04:52
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-74
+      time: 2026-07-13 04:52
+      user: aditya.pandey@vvnt.in
+      action: Toggled distributor status to active
+      target: 'xyz '
+      ip: 127.0.0.1
+    - id: L-73
+      time: 2026-07-13 04:51
+      user: aditya.pandey@vvnt.in
+      action: Toggled distributor status to inactive
+      target: 'xyz '
+      ip: 127.0.0.1
+    - id: L-72
+      time: 2026-06-29 05:54
+      user: aditya.pandey@vvnt.in
+      action: Deleted support ticket
+      target: xdcvbnm,
+      ip: 127.0.0.1
+    - id: L-71
+      time: 2026-06-29 05:54
+      user: aditya.pandey@vvnt.in
+      action: Updated support ticket
+      target: xdcvbnm,
+      ip: 127.0.0.1
+    - id: L-70
+      time: 2026-06-29 05:54
+      user: aditya.pandey@vvnt.in
+      action: Created support ticket
+      target: asdfg
+      ip: 127.0.0.1
+    - id: L-69
+      time: 2026-06-29 05:44
+      user: aditya.pandey@vvnt.in
+      action: Created support ticket
+      target: wertyuiu
+      ip: 127.0.0.1
+    - id: L-68
+      time: 2026-06-29 05:35
+      user: aditya.pandey@vvnt.in
+      action: Created support ticket
+      target: xdcvbnm,
+      ip: 127.0.0.1
+    - id: L-67
+      time: 2026-06-29 05:31
+      user: aditya.pandey@vvnt.in
+      action: Deleted support ticket
+      target: dghk
+      ip: 127.0.0.1
+    - id: L-66
+      time: 2026-06-29 05:24
+      user: aditya.pandey@vvnt.in
+      action: Updated setting
+      target: auto_logout_enabled
+      ip: 127.0.0.1
+    - id: L-65
+      time: 2026-06-29 05:08
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-64
+      time: 2026-06-27 11:30
+      user: aditya.pandey@vvnt.in
+      action: Approved chemist KYC
+      target: Zed Phama
+      ip: 127.0.0.1
+    - id: L-63
+      time: 2026-06-27 10:05
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-62
+      time: 2026-06-27 10:05
+      user: aditya.pandey@vvnt.in
+      action: Updated product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-61
+      time: 2026-06-27 10:04
+      user: aditya.pandey@vvnt.in
+      action: Created product
+      target: Glucometer
+      ip: 127.0.0.1
+    - id: L-60
+      time: 2026-06-27 09:38
+      user: aditya.pandey@vvnt.in
+      action: Approved distributor KYC
+      target: 'xyz '
+      ip: 127.0.0.1
+    - id: L-59
+      time: 2026-06-27 09:27
+      user: aditya.pandey@vvnt.in
+      action: Approved distributor KYC
+      target: Pradeep Yadav
+      ip: 127.0.0.1
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/chemists?skip=0&limit=-1
+  original_path: /api/v1/admin/chemists?skip=0&limit=-1
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 1
+        unique_id: CHM-DST-MANI-3201-4671
+        name: pratha-store
+        tier: silver
+        status: active
+        city: agra
+        state: Uttar Pradesh
+        pincode: '282001'
+        drug_license_no: dl-luc-2-2023
+        gstin: 81AAAAA0000A1Z5
+        phone: '7409594671'
+        email: pratha@vvnt.in
+        sales: 44382.0
+        total_orders: 4
+        current_orders: 0
+        pending_orders: 2
+        conversions: 15.4%
+        site_visits: 26
+        aov: 11095.5
+        assigned_distributor: manik
+        joined_date: Jun 26, 2026
+        kyc_documents:
+          drug_license: dl_797a2b21a9ca.png
+          gst_certificate: gst_fc6349c91865.png
+          cancelled_cheque: cheque_8a78daa87298.pdf
+        qr_code: http://192.168.0.84:8080/shop?affiliate=9B337E6A9E1844BA
+        coupon_code: PRATHA-1754
+      - id: 2
+        unique_id: CHM-DST-SURA-9465-7677
+        name: Noida
+        tier: silver
+        status: active
+        city: rtrt
+        state: Punjab
+        pincode: '110001'
+        drug_license_no: '33'
+        gstin: 22KKKKK4545A1Z5
+        phone: '6204737677'
+        email: harshsinghpriyadarshi123@gmail.com
+        sales: 47749.4
+        total_orders: 4
+        current_orders: 0
+        pending_orders: 1
+        conversions: 36.4%
+        site_visits: 11
+        aov: 11937.35
+        assigned_distributor: 'VVnt '
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_eac8c9618e38.png
+          gst_certificate: gst_031cbb0899f3.png
+          cancelled_cheque: cheque_155137b795a1.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=02C0C8E60D614CF8
+        coupon_code: NOIDA-2933
+      - id: 3
+        unique_id: CHM-DST-MANI-3201-8169
+        name: Noida
+        tier: silver
+        status: active
+        city: Sector 132
+        state: Uttar Pradesh
+        pincode: '110096'
+        drug_license_no: DI-djwhd
+        gstin: 29ABCDE1234F1Z5
+        phone: '8092958169'
+        email: akshay@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        site_visits: 1
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_5e97552d0ca7.pdf
+          gst_certificate: gst_e624a393e1f6.pdf
+          cancelled_cheque: cheque_7fedc7bdf5d2.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=20134B363D044CB8
+        coupon_code: NOIDA-3535
+      - id: 4
+        unique_id: CHM-DST-ABHI-0009-4444
+        name: Jetha medical
+        tier: silver
+        status: active
+        city: dwarka
+        state: Delhi
+        pincode: '201003'
+        drug_license_no: df-d-dd3
+        gstin: 27ABCDE1234F2Z3
+        phone: '4444444444'
+        email: negiabhishek644@gmail.com
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        site_visits: 9
+        aov: 0.0
+        assigned_distributor: Ab Meds
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_d488382959a2.pdf
+          gst_certificate: gst_0adf62462500.pdf
+          cancelled_cheque: cheque_6fe5aa1a397a.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=D68B6983BC7546FC
+        coupon_code: JETHAM-4793
+      - id: 5
+        unique_id: CHM-DST-ABHI-0009-2222
+        name: jetha-meds
+        tier: silver
+        status: active
+        city: dwarka
+        state: Delhi
+        pincode: '333333'
+        drug_license_no: dl-ddd-d
+        gstin: 27ABCDE1234F2Z9
+        phone: '2222222222'
+        email: abhishek2@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: Ab Meds
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cba693d18be3.pdf
+          gst_certificate: gst_73f279282b5a.pdf
+          cancelled_cheque: cheque_eed44c29f46e.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=B046AB16D4FB4714
+        coupon_code: JETHAM-5339
+      - id: 6
+        unique_id: CHM-DST-MANI-3201-1035
+        name: Pradeep Yadav
+        tier: silver
+        status: active
+        city: NOIDA SECTOR 60
+        state: Uttar Pradesh
+        pincode: '201301'
+        drug_license_no: 5634632D
+        gstin: 07DDIPA9391G1ZC
+        phone: '9616791035'
+        email: pradeep.yadav@vvnt.in
+        sales: 11106.0
+        total_orders: 2
+        current_orders: 0
+        pending_orders: 0
+        conversions: 18.2%
+        site_visits: 11
+        aov: 5553.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_e3de3a287575.pdf
+          gst_certificate: gst_048b267e1129.pdf
+          cancelled_cheque: cheque_3a142526ba1e.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=55BC6E7A190143D0
+        coupon_code: NOIDA-6539
+      - id: 7
+        unique_id: CHM-DST-MANI-3201-1420
+        name: Ghaziabad
+        tier: silver
+        status: active
+        city: Mansarovar Park Shahpur Bamheta, Lalkuan, Ghaziabad
+        state: Uttar Pradesh
+        pincode: '201002'
+        drug_license_no: DL123456789
+        gstin: 07AAGFF2194N1Z1
+        phone: '8882951420'
+        email: dilip@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_2c1d18f0d474.png
+          gst_certificate: gst_89bd916676f6.png
+          cancelled_cheque: cheque_546a477f3b2c.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=7232D74B87A74B0A
+        coupon_code: GHAZIA-7678
+      - id: 8
+        unique_id: CHM-DST-SURA-9465-1094
+        name: Zed Phama
+        tier: silver
+        status: active
+        city: Sector 132
+        state: Punjab
+        pincode: '110078'
+        drug_license_no: AA-BB-CCCk
+        gstin: 33AAACI1607G2Z7
+        phone: '6283621094'
+        email: asurajnegi7@gmail.com
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: 'VVnt '
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_5e24ff3f5e7c.png
+          gst_certificate: gst_937eff0c2be2.png
+          cancelled_cheque: cheque_65ed16f9b4bd.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=4A348BD4FEA3426D
+        coupon_code: ZEDPHA-8338
+      - id: 9
+        unique_id: CHM-DST-MANI-3201-1045
+        name: Pradeep
+        tier: silver
+        status: rejected
+        city: Noida Sector 71
+        state: Uttar Pradesh
+        pincode: '201301'
+        drug_license_no: '767433434'
+        gstin: 07DDIPA9391G1ZD
+        phone: '9616791045'
+        email: pradeepyadav@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_a5c340d5fdc5.pdf
+          gst_certificate: gst_f6c5c85dc736.pdf
+          cancelled_cheque: cheque_1abb6b775cdb.pdf
+        qr_code: null
+        coupon_code: null
+      - id: 10
+        unique_id: CHM-UNASSIGNED-3210
+        name: Noida
+        tier: silver
+        status: active
+        city: Flat No. 204, Sunrise Residency, Vaishali Nagar, Jaipur, Rajasthan -
+          302021
+        state: Rajasthan
+        pincode: '302021'
+        drug_license_no: DL-JPR-2026-00125
+        gstin: 27ABCDE1234F1Z5
+        phone: '9876543210'
+        email: anny@gmail.com
+        sales: 19158.1
+        total_orders: 1
+        current_orders: 0
+        pending_orders: 0
+        conversions: 1.9%
+        site_visits: 53
+        aov: 19158.1
+        assigned_distributor: Unassigned
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_0e5685a9272c.pdf
+          gst_certificate: gst_d81605f2f94a.pdf
+          cancelled_cheque: cheque_e3f1f1344292.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=CB323BBC71C74138
+        coupon_code: NOIDA-10301
+      - id: 11
+        unique_id: CHM-DST-ABHI-0009-0904
+        name: manik medical
+        tier: silver
+        status: active
+        city: noida
+        state: Delhi
+        pincode: '444444'
+        drug_license_no: df-d-dd1
+        gstin: 27ABCDE1234F2Z2
+        phone: '9999090904'
+        email: vvnt001@gmail.com
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: Ab Meds
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_7d4ee1d2f2b1.pdf
+          gst_certificate: gst_a64d29f57c1d.pdf
+          cancelled_cheque: cheque_52166299572e.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=38714FE7F1BC4A4E
+        coupon_code: MANIKM-11855
+      - id: 12
+        unique_id: CHM-DST-MOHI-3993-9990
+        name: Pharmacy
+        tier: silver
+        status: active
+        city: delhi
+        state: Delhi
+        pincode: '110001'
+        drug_license_no: d
+        gstin: 22AAAAA0000A1Z5
+        phone: '9999999990'
+        email: abhi@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: Founder_ABC
+        joined_date: Jul 31, 2026
+        kyc_documents:
+          drug_license: dl_b55a82471ee3.pdf
+          gst_certificate: gst_ed5b7f788a2f.pdf
+          cancelled_cheque: cheque_ba1c5d4b5ee3.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=6B176452DEFC4F4A
+        coupon_code: WS760G0V
+      total: 12
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint:
+  - data
+  - data[].aov
+  - data[].assigned_distributor
+  - data[].city
+  - data[].conversions
+  - data[].coupon_code
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.cancelled_cheque
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].pincode
+  - data[].qr_code
+  - data[].sales
+  - data[].site_visits
+  - data[].state
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/chemists?skip=0&limit=10
+  original_path: /api/v1/admin/chemists?skip=0&limit=10
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 1
+        unique_id: CHM-DST-MANI-3201-4671
+        name: pratha-store
+        tier: silver
+        status: active
+        city: agra
+        state: Uttar Pradesh
+        pincode: '282001'
+        drug_license_no: dl-luc-2-2023
+        gstin: 81AAAAA0000A1Z5
+        phone: '7409594671'
+        email: pratha@vvnt.in
+        sales: 44382.0
+        total_orders: 4
+        current_orders: 0
+        pending_orders: 2
+        conversions: 15.4%
+        site_visits: 26
+        aov: 11095.5
+        assigned_distributor: manik
+        joined_date: Jun 26, 2026
+        kyc_documents:
+          drug_license: dl_797a2b21a9ca.png
+          gst_certificate: gst_fc6349c91865.png
+          cancelled_cheque: cheque_8a78daa87298.pdf
+        qr_code: http://192.168.0.84:8080/shop?affiliate=9B337E6A9E1844BA
+        coupon_code: PRATHA-1754
+      - id: 2
+        unique_id: CHM-DST-SURA-9465-7677
+        name: Noida
+        tier: silver
+        status: active
+        city: rtrt
+        state: Punjab
+        pincode: '110001'
+        drug_license_no: '33'
+        gstin: 22KKKKK4545A1Z5
+        phone: '6204737677'
+        email: harshsinghpriyadarshi123@gmail.com
+        sales: 47749.4
+        total_orders: 4
+        current_orders: 0
+        pending_orders: 1
+        conversions: 36.4%
+        site_visits: 11
+        aov: 11937.35
+        assigned_distributor: 'VVnt '
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_eac8c9618e38.png
+          gst_certificate: gst_031cbb0899f3.png
+          cancelled_cheque: cheque_155137b795a1.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=02C0C8E60D614CF8
+        coupon_code: NOIDA-2933
+      - id: 3
+        unique_id: CHM-DST-MANI-3201-8169
+        name: Noida
+        tier: silver
+        status: active
+        city: Sector 132
+        state: Uttar Pradesh
+        pincode: '110096'
+        drug_license_no: DI-djwhd
+        gstin: 29ABCDE1234F1Z5
+        phone: '8092958169'
+        email: akshay@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        site_visits: 1
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_5e97552d0ca7.pdf
+          gst_certificate: gst_e624a393e1f6.pdf
+          cancelled_cheque: cheque_7fedc7bdf5d2.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=20134B363D044CB8
+        coupon_code: NOIDA-3535
+      - id: 4
+        unique_id: CHM-DST-ABHI-0009-4444
+        name: Jetha medical
+        tier: silver
+        status: active
+        city: dwarka
+        state: Delhi
+        pincode: '201003'
+        drug_license_no: df-d-dd3
+        gstin: 27ABCDE1234F2Z3
+        phone: '4444444444'
+        email: negiabhishek644@gmail.com
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        site_visits: 9
+        aov: 0.0
+        assigned_distributor: Ab Meds
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_d488382959a2.pdf
+          gst_certificate: gst_0adf62462500.pdf
+          cancelled_cheque: cheque_6fe5aa1a397a.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=D68B6983BC7546FC
+        coupon_code: JETHAM-4793
+      - id: 5
+        unique_id: CHM-DST-ABHI-0009-2222
+        name: jetha-meds
+        tier: silver
+        status: active
+        city: dwarka
+        state: Delhi
+        pincode: '333333'
+        drug_license_no: dl-ddd-d
+        gstin: 27ABCDE1234F2Z9
+        phone: '2222222222'
+        email: abhishek2@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: Ab Meds
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cba693d18be3.pdf
+          gst_certificate: gst_73f279282b5a.pdf
+          cancelled_cheque: cheque_eed44c29f46e.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=B046AB16D4FB4714
+        coupon_code: JETHAM-5339
+      - id: 6
+        unique_id: CHM-DST-MANI-3201-1035
+        name: Pradeep Yadav
+        tier: silver
+        status: active
+        city: NOIDA SECTOR 60
+        state: Uttar Pradesh
+        pincode: '201301'
+        drug_license_no: 5634632D
+        gstin: 07DDIPA9391G1ZC
+        phone: '9616791035'
+        email: pradeep.yadav@vvnt.in
+        sales: 11106.0
+        total_orders: 2
+        current_orders: 0
+        pending_orders: 0
+        conversions: 18.2%
+        site_visits: 11
+        aov: 5553.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_e3de3a287575.pdf
+          gst_certificate: gst_048b267e1129.pdf
+          cancelled_cheque: cheque_3a142526ba1e.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=55BC6E7A190143D0
+        coupon_code: NOIDA-6539
+      - id: 7
+        unique_id: CHM-DST-MANI-3201-1420
+        name: Ghaziabad
+        tier: silver
+        status: active
+        city: Mansarovar Park Shahpur Bamheta, Lalkuan, Ghaziabad
+        state: Uttar Pradesh
+        pincode: '201002'
+        drug_license_no: DL123456789
+        gstin: 07AAGFF2194N1Z1
+        phone: '8882951420'
+        email: dilip@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_2c1d18f0d474.png
+          gst_certificate: gst_89bd916676f6.png
+          cancelled_cheque: cheque_546a477f3b2c.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=7232D74B87A74B0A
+        coupon_code: GHAZIA-7678
+      - id: 8
+        unique_id: CHM-DST-SURA-9465-1094
+        name: Zed Phama
+        tier: silver
+        status: active
+        city: Sector 132
+        state: Punjab
+        pincode: '110078'
+        drug_license_no: AA-BB-CCCk
+        gstin: 33AAACI1607G2Z7
+        phone: '6283621094'
+        email: asurajnegi7@gmail.com
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: 'VVnt '
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_5e24ff3f5e7c.png
+          gst_certificate: gst_937eff0c2be2.png
+          cancelled_cheque: cheque_65ed16f9b4bd.png
+        qr_code: http://192.168.0.49:8080/shop?affiliate=4A348BD4FEA3426D
+        coupon_code: ZEDPHA-8338
+      - id: 9
+        unique_id: CHM-DST-MANI-3201-1045
+        name: Pradeep
+        tier: silver
+        status: rejected
+        city: Noida Sector 71
+        state: Uttar Pradesh
+        pincode: '201301'
+        drug_license_no: '767433434'
+        gstin: 07DDIPA9391G1ZD
+        phone: '9616791045'
+        email: pradeepyadav@vvnt.in
+        sales: 0.0
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        site_visits: 0
+        aov: 0.0
+        assigned_distributor: manik
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_a5c340d5fdc5.pdf
+          gst_certificate: gst_f6c5c85dc736.pdf
+          cancelled_cheque: cheque_1abb6b775cdb.pdf
+        qr_code: null
+        coupon_code: null
+      - id: 10
+        unique_id: CHM-UNASSIGNED-3210
+        name: Noida
+        tier: silver
+        status: active
+        city: Flat No. 204, Sunrise Residency, Vaishali Nagar, Jaipur, Rajasthan -
+          302021
+        state: Rajasthan
+        pincode: '302021'
+        drug_license_no: DL-JPR-2026-00125
+        gstin: 27ABCDE1234F1Z5
+        phone: '9876543210'
+        email: anny@gmail.com
+        sales: 19158.1
+        total_orders: 1
+        current_orders: 0
+        pending_orders: 0
+        conversions: 1.9%
+        site_visits: 53
+        aov: 19158.1
+        assigned_distributor: Unassigned
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_0e5685a9272c.pdf
+          gst_certificate: gst_d81605f2f94a.pdf
+          cancelled_cheque: cheque_e3f1f1344292.pdf
+        qr_code: http://192.168.0.49:8080/shop?affiliate=CB323BBC71C74138
+        coupon_code: NOIDA-10301
+      total: 12
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint:
+  - data
+  - data[].aov
+  - data[].assigned_distributor
+  - data[].city
+  - data[].conversions
+  - data[].coupon_code
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.cancelled_cheque
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].pincode
+  - data[].qr_code
+  - data[].sales
+  - data[].site_visits
+  - data[].state
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 5
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/commissions/settings
+  original_path: /api/v1/admin/commissions/settings
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+    - id: 1
+      product_id: 1
+      partner_type: chemist
+      tier: silver
+      value_type: percentage
+      value: 8.0
+    - id: 2
+      product_id: 1
+      partner_type: chemist
+      tier: gold
+      value_type: price
+      value: 63.0
+    - id: 3
+      product_id: 1
+      partner_type: chemist
+      tier: platinum
+      value_type: percentage
+      value: 6.0
+    - id: 4
+      product_id: 1
+      partner_type: distributor
+      tier: silver
+      value_type: percentage
+      value: 20.0
+    - id: 5
+      product_id: 1
+      partner_type: distributor
+      tier: gold
+      value_type: percentage
+      value: 10.0
+    - id: 6
+      product_id: 1
+      partner_type: distributor
+      tier: platinum
+      value_type: percentage
+      value: 12.0
+    - id: 7
+      product_id: 2
+      partner_type: chemist
+      tier: silver
+      value_type: percentage
+      value: 2.0
+    - id: 8
+      product_id: 2
+      partner_type: chemist
+      tier: gold
+      value_type: percentage
+      value: 4.0
+    - id: 9
+      product_id: 2
+      partner_type: chemist
+      tier: platinum
+      value_type: percentage
+      value: 6.0
+    - id: 10
+      product_id: 2
+      partner_type: distributor
+      tier: silver
+      value_type: percentage
+      value: 8.0
+    - id: 11
+      product_id: 2
+      partner_type: distributor
+      tier: gold
+      value_type: percentage
+      value: 10.0
+    - id: 12
+      product_id: 2
+      partner_type: distributor
+      tier: platinum
+      value_type: percentage
+      value: 12.0
+    - id: 13
+      product_id: 3
+      partner_type: chemist
+      tier: silver
+      value_type: percentage
+      value: 5.0
+    - id: 14
+      product_id: 3
+      partner_type: chemist
+      tier: gold
+      value_type: percentage
+      value: 10.0
+    - id: 15
+      product_id: 3
+      partner_type: chemist
+      tier: platinum
+      value_type: percentage
+      value: 15.0
+    - id: 16
+      product_id: 3
+      partner_type: distributor
+      tier: silver
+      value_type: percentage
+      value: 2.0
+    - id: 17
+      product_id: 3
+      partner_type: distributor
+      tier: gold
+      value_type: percentage
+      value: 4.0
+    - id: 18
+      product_id: 3
+      partner_type: distributor
+      tier: platinum
+      value_type: percentage
+      value: 6.0
+    - id: 19
+      product_id: 4
+      partner_type: chemist
+      tier: silver
+      value_type: percentage
+      value: 4.0
+    - id: 20
+      product_id: 4
+      partner_type: chemist
+      tier: gold
+      value_type: percentage
+      value: 8.0
+    - id: 21
+      product_id: 4
+      partner_type: chemist
+      tier: platinum
+      value_type: percentage
+      value: 12.0
+    - id: 22
+      product_id: 4
+      partner_type: distributor
+      tier: silver
+      value_type: percentage
+      value: 14.0
+    - id: 23
+      product_id: 4
+      partner_type: distributor
+      tier: gold
+      value_type: percentage
+      value: 5.0
+    - id: 24
+      product_id: 4
+      partner_type: distributor
+      tier: platinum
+      value_type: percentage
+      value: 7.0
+    - id: 25
+      product_id: 5
+      partner_type: chemist
+      tier: silver
+      value_type: percentage
+      value: 2.0
+    - id: 26
+      product_id: 5
+      partner_type: chemist
+      tier: gold
+      value_type: percentage
+      value: 3.0
+    - id: 27
+      product_id: 5
+      partner_type: chemist
+      tier: platinum
+      value_type: percentage
+      value: 3.0
+    - id: 28
+      product_id: 5
+      partner_type: distributor
+      tier: silver
+      value_type: percentage
+      value: 3.0
+    - id: 29
+      product_id: 5
+      partner_type: distributor
+      tier: gold
+      value_type: percentage
+      value: 3.0
+    - id: 30
+      product_id: 5
+      partner_type: distributor
+      tier: platinum
+      value_type: percentage
+      value: 3.0
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint: []
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/distributors?skip=0&limit=-1
+  original_path: /api/v1/admin/distributors?skip=0&limit=-1
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 1
+        unique_id: DST-MANI-3201
+        name: manik
+        region: Uttar Pradesh
+        address: qwerty
+        drug_license_no: DL LFG 4005
+        gstin: 22AAAAA0000A1Z8
+        phone: '9876543201'
+        email: manik.vinayak@vvnt.in
+        status: inactive
+        inventory_value: 835090.0
+        active_chemists: 5
+        assigned_chemists_list:
+        - id: 1
+          name: pratha-store
+        - id: 3
+          name: Noida
+        - id: 6
+          name: Pradeep Yadav
+        - id: 7
+          name: Ghaziabad
+        - id: 9
+          name: Pradeep
+        total_orders: 23
+        current_orders: 1
+        pending_orders: 8
+        conversions: 60.5%
+        aov: 10114.27
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 26, 2026
+        kyc_documents:
+          drug_license: dl_1d19a14e9c97.png
+          gst_certificate: gst_e1ae88207ec1.png
+      - id: 2
+        unique_id: DST-NEGI-9909
+        name: Founder_ABC
+        region: Delhi
+        address: dwarka
+        drug_license_no: df-d-ddd
+        gstin: 27ABCDE1234F2Z5
+        phone: '9999999909'
+        email: negiabhishek944@gmail.com
+        status: inactive
+        inventory_value: 1764100.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 7
+        current_orders: 2
+        pending_orders: 3
+        conversions: 0%
+        aov: 7620.69
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_b9814cb31443.pdf
+          gst_certificate: gst_4d0dd5e4bc8e.pdf
+      - id: 3
+        unique_id: DST-MOHI-3993
+        name: Founder_ABC
+        region: Delhi
+        address: dwarka
+        drug_license_no: df-d-dd4
+        gstin: 27ABCDE1234F2Z6
+        phone: '9349393993'
+        email: mohit@vvnt.in
+        status: active
+        inventory_value: 7500.0
+        active_chemists: 1
+        assigned_chemists_list:
+        - id: 12
+          name: Pharmacy
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_42492d5b19c7.pdf
+          gst_certificate: gst_f48135dd744e.pdf
+      - id: 4
+        unique_id: DST-SURA-9465
+        name: 'VVnt '
+        region: Punjab
+        address: Sector 132 Noida
+        drug_license_no: AA-BB-CCC
+        gstin: 33AAACI1607G2Z5
+        phone: '9803549465'
+        email: suraj.negi@vvnt.in
+        status: active
+        inventory_value: 0.0
+        active_chemists: 2
+        assigned_chemists_list:
+        - id: 2
+          name: Noida
+        - id: 8
+          name: Zed Phama
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_0265bb594d20.png
+          gst_certificate: gst_9326758de97e.png
+      - id: 5
+        unique_id: DST-NEGI-7890
+        name: VVnt Foundation
+        region: Gujarat
+        address: Sector 786
+        drug_license_no: AA-BB-CCC5
+        gstin: 33AAACI1607G2Z6
+        phone: '1234567890'
+        email: negi62819@gmail.com
+        status: active
+        inventory_value: 0.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_e4805004fab2.png
+          gst_certificate: gst_8230d2fe7b54.png
+      - id: 6
+        unique_id: DST-AVIN-7489
+        name: distributor-12
+        region: Punjab
+        address: Lig-72, A-sector, sonagiri
+        drug_license_no: DL-20-2026-001234
+        gstin: 03ABCDE1234F1Z5
+        phone: '8406047489'
+        email: avinash@vvnt.in
+        status: active
+        inventory_value: 160060.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_f224743a4f2f.pdf
+          gst_certificate: gst_f7f8c8aa71f8.pdf
+      - id: 7
+        unique_id: DST-PRAD-1130
+        name: Pradeep Yadav
+        region: Uttar Pradesh
+        address: Noida Sector 71
+        drug_license_no: '65443654'
+        gstin: 07DDIPA9391G1ZE
+        phone: '9616791130'
+        email: pradeep.yadav12@vvnt.in
+        status: active
+        inventory_value: 0.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cfa0388b3e22.pdf
+          gst_certificate: gst_df589fa1e0d2.pdf
+      - id: 8
+        unique_id: DST-ANYA-3244
+        name: 'xyz '
+        region: Uttar Pradesh
+        address: Warehouse No. 12, Industrial Area, Sigra, Varanasi, Uttar Pradesh
+        drug_license_no: DL-JPR-2026-00125
+        gstin: 22AAAAA0000A1Z5
+        phone: '9876543244'
+        email: anya@gmail.com
+        status: inactive
+        inventory_value: 15000.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cb029a7e3fa5.pdf
+          gst_certificate: gst_38fa06934921.pdf
+      - id: 9
+        unique_id: DST-S.SI-8799
+        name: VVnT Sequor
+        region: Haryana
+        address: 'j-18 rajeev camp delhi '
+        drug_license_no: DL-LI1-2034
+        gstin: 03ABCDE1234F1Z6
+        phone: '7787878799'
+        email: s.singh202619@gmail.com
+        status: active
+        inventory_value: 35000.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 29, 2026
+        kyc_documents:
+          drug_license: dl_9269ac5ef10f.pdf
+          gst_certificate: gst_01221a4c7c7e.pdf
+      - id: 10
+        unique_id: DST-ABHI-0009
+        name: Ab Meds
+        region: Delhi
+        address: dwarka
+        drug_license_no: sd
+        gstin: 22AAAAA1001A1Z5
+        phone: 0000000009
+        email: abhi12@vvnt.in
+        status: rejected
+        inventory_value: 0.0
+        active_chemists: 3
+        assigned_chemists_list:
+        - id: 4
+          name: Jetha medical
+        - id: 5
+          name: jetha-meds
+        - id: 11
+          name: manik medical
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jul 31, 2026
+        kyc_documents:
+          drug_license: dl_9bcac991a962.pdf
+          gst_certificate: gst_266ed48ecfd4.pdf
+      total: 10
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint:
+  - data
+  - data[].active_chemists
+  - data[].address
+  - data[].aov
+  - data[].assigned_chemists_list
+  - data[].assigned_chemists_list[].id
+  - data[].assigned_chemists_list[].name
+  - data[].conversions
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].inventory_value
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].rating
+  - data[].region
+  - data[].sla
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/distributors?skip=0&limit=10
+  original_path: /api/v1/admin/distributors?skip=0&limit=10
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 1
+        unique_id: DST-MANI-3201
+        name: manik
+        region: Uttar Pradesh
+        address: qwerty
+        drug_license_no: DL LFG 4005
+        gstin: 22AAAAA0000A1Z8
+        phone: '9876543201'
+        email: manik.vinayak@vvnt.in
+        status: inactive
+        inventory_value: 835090.0
+        active_chemists: 5
+        assigned_chemists_list:
+        - id: 1
+          name: pratha-store
+        - id: 3
+          name: Noida
+        - id: 6
+          name: Pradeep Yadav
+        - id: 7
+          name: Ghaziabad
+        - id: 9
+          name: Pradeep
+        total_orders: 23
+        current_orders: 1
+        pending_orders: 8
+        conversions: 60.5%
+        aov: 10114.27
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 26, 2026
+        kyc_documents:
+          drug_license: dl_1d19a14e9c97.png
+          gst_certificate: gst_e1ae88207ec1.png
+      - id: 2
+        unique_id: DST-NEGI-9909
+        name: Founder_ABC
+        region: Delhi
+        address: dwarka
+        drug_license_no: df-d-ddd
+        gstin: 27ABCDE1234F2Z5
+        phone: '9999999909'
+        email: negiabhishek944@gmail.com
+        status: inactive
+        inventory_value: 1764100.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 7
+        current_orders: 2
+        pending_orders: 3
+        conversions: 0%
+        aov: 7620.69
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_b9814cb31443.pdf
+          gst_certificate: gst_4d0dd5e4bc8e.pdf
+      - id: 3
+        unique_id: DST-MOHI-3993
+        name: Founder_ABC
+        region: Delhi
+        address: dwarka
+        drug_license_no: df-d-dd4
+        gstin: 27ABCDE1234F2Z6
+        phone: '9349393993'
+        email: mohit@vvnt.in
+        status: active
+        inventory_value: 7500.0
+        active_chemists: 1
+        assigned_chemists_list:
+        - id: 12
+          name: Pharmacy
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_42492d5b19c7.pdf
+          gst_certificate: gst_f48135dd744e.pdf
+      - id: 4
+        unique_id: DST-SURA-9465
+        name: 'VVnt '
+        region: Punjab
+        address: Sector 132 Noida
+        drug_license_no: AA-BB-CCC
+        gstin: 33AAACI1607G2Z5
+        phone: '9803549465'
+        email: suraj.negi@vvnt.in
+        status: active
+        inventory_value: 0.0
+        active_chemists: 2
+        assigned_chemists_list:
+        - id: 2
+          name: Noida
+        - id: 8
+          name: Zed Phama
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_0265bb594d20.png
+          gst_certificate: gst_9326758de97e.png
+      - id: 5
+        unique_id: DST-NEGI-7890
+        name: VVnt Foundation
+        region: Gujarat
+        address: Sector 786
+        drug_license_no: AA-BB-CCC5
+        gstin: 33AAACI1607G2Z6
+        phone: '1234567890'
+        email: negi62819@gmail.com
+        status: active
+        inventory_value: 0.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_e4805004fab2.png
+          gst_certificate: gst_8230d2fe7b54.png
+      - id: 6
+        unique_id: DST-AVIN-7489
+        name: distributor-12
+        region: Punjab
+        address: Lig-72, A-sector, sonagiri
+        drug_license_no: DL-20-2026-001234
+        gstin: 03ABCDE1234F1Z5
+        phone: '8406047489'
+        email: avinash@vvnt.in
+        status: active
+        inventory_value: 160060.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_f224743a4f2f.pdf
+          gst_certificate: gst_f7f8c8aa71f8.pdf
+      - id: 7
+        unique_id: DST-PRAD-1130
+        name: Pradeep Yadav
+        region: Uttar Pradesh
+        address: Noida Sector 71
+        drug_license_no: '65443654'
+        gstin: 07DDIPA9391G1ZE
+        phone: '9616791130'
+        email: pradeep.yadav12@vvnt.in
+        status: active
+        inventory_value: 0.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cfa0388b3e22.pdf
+          gst_certificate: gst_df589fa1e0d2.pdf
+      - id: 8
+        unique_id: DST-ANYA-3244
+        name: 'xyz '
+        region: Uttar Pradesh
+        address: Warehouse No. 12, Industrial Area, Sigra, Varanasi, Uttar Pradesh
+        drug_license_no: DL-JPR-2026-00125
+        gstin: 22AAAAA0000A1Z5
+        phone: '9876543244'
+        email: anya@gmail.com
+        status: inactive
+        inventory_value: 15000.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 27, 2026
+        kyc_documents:
+          drug_license: dl_cb029a7e3fa5.pdf
+          gst_certificate: gst_38fa06934921.pdf
+      - id: 9
+        unique_id: DST-S.SI-8799
+        name: VVnT Sequor
+        region: Haryana
+        address: 'j-18 rajeev camp delhi '
+        drug_license_no: DL-LI1-2034
+        gstin: 03ABCDE1234F1Z6
+        phone: '7787878799'
+        email: s.singh202619@gmail.com
+        status: active
+        inventory_value: 35000.0
+        active_chemists: 0
+        assigned_chemists_list: []
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jun 29, 2026
+        kyc_documents:
+          drug_license: dl_9269ac5ef10f.pdf
+          gst_certificate: gst_01221a4c7c7e.pdf
+      - id: 10
+        unique_id: DST-ABHI-0009
+        name: Ab Meds
+        region: Delhi
+        address: dwarka
+        drug_license_no: sd
+        gstin: 22AAAAA1001A1Z5
+        phone: 0000000009
+        email: abhi12@vvnt.in
+        status: rejected
+        inventory_value: 0.0
+        active_chemists: 3
+        assigned_chemists_list:
+        - id: 4
+          name: Jetha medical
+        - id: 5
+          name: jetha-meds
+        - id: 11
+          name: manik medical
+        total_orders: 0
+        current_orders: 0
+        pending_orders: 0
+        conversions: 0.0%
+        aov: 0.0
+        sla: 100.0
+        rating: 4.8
+        tier: silver
+        joined_date: Jul 31, 2026
+        kyc_documents:
+          drug_license: dl_9bcac991a962.pdf
+          gst_certificate: gst_266ed48ecfd4.pdf
+      total: 10
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint:
+  - data
+  - data[].active_chemists
+  - data[].address
+  - data[].aov
+  - data[].assigned_chemists_list
+  - data[].assigned_chemists_list[].id
+  - data[].assigned_chemists_list[].name
+  - data[].conversions
+  - data[].current_orders
+  - data[].drug_license_no
+  - data[].email
+  - data[].gstin
+  - data[].id
+  - data[].inventory_value
+  - data[].joined_date
+  - data[].kyc_documents
+  - data[].kyc_documents.drug_license
+  - data[].kyc_documents.gst_certificate
+  - data[].name
+  - data[].pending_orders
+  - data[].phone
+  - data[].rating
+  - data[].region
+  - data[].sla
+  - data[].status
+  - data[].tier
+  - data[].total_orders
+  - data[].unique_id
+  - total
+  sample_count: 5
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/orders?skip=0&limit=10
+  original_path: /api/v1/admin/orders?skip=0&limit=10
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: AMY-2026-0030
+        db_id: 30
+        chemist_id: 1
+        date: '2026-07-13'
+        customer: Shweta
+        product: wc
+        amount: 15130.0
+        status: created
+      - id: AMY-2026-0029
+        db_id: 29
+        chemist_id: null
+        date: '2026-06-30'
+        customer: harsh
+        product: wc
+        amount: 7285.0
+        status: delivered
+      - id: AMY-2026-0028
+        db_id: 28
+        chemist_id: null
+        date: '2026-06-29'
+        customer: harsh
+        product: Quad, wc
+        amount: 8967.0
+        status: delivered
+      - id: AMY-2026-0027
+        db_id: 27
+        chemist_id: null
+        date: '2026-06-29'
+        customer: harsh
+        product: Quad
+        amount: 3364.0
+        status: created
+      - id: AMY-2026-0026
+        db_id: 26
+        chemist_id: null
+        date: '2026-06-27'
+        customer: harsh
+        product: walker
+        amount: 29700.2
+        status: created
+      - id: AMY-2026-0025
+        db_id: 25
+        chemist_id: 2
+        date: '2026-06-27'
+        customer: harsh
+        product: wc
+        amount: 7845.0
+        status: delivered
+      - id: AMY-2026-0024
+        db_id: 24
+        chemist_id: 10
+        date: '2026-06-27'
+        customer: shivani
+        product: walker, wc, Quad
+        amount: 19158.1
+        status: cancelled
+      - id: AMY-2026-0023
+        db_id: 23
+        chemist_id: null
+        date: '2026-06-27'
+        customer: harsh
+        product: wc
+        amount: 7840.0
+        status: created
+      - id: AMY-2026-0022
+        db_id: 22
+        chemist_id: null
+        date: '2026-06-27'
+        customer: harsh
+        product: wc, Glucometer
+        amount: 10608.0
+        status: delivered
+      - id: AMY-2026-0021
+        db_id: 21
+        chemist_id: null
+        date: '2026-06-27'
+        customer: Abhishek negi
+        product: Quad
+        amount: 1680.0
+        status: created
+      total: 30
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint:
+  - data
+  - data[].amount
+  - data[].chemist_id
+  - data[].customer
+  - data[].date
+  - data[].db_id
+  - data[].id
+  - data[].product
+  - data[].status
+  - total
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/products?skip=0&limit=10
+  original_path: /api/v1/admin/products?skip=0&limit=10
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 5
+        sku: SKU-1785467710
+        name: cane
+        category: canes
+        mrp: 1993.0
+        landing_price: 1594.4
+        is_active: true
+        image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+        original_image_url: null
+        description: ''
+        specifications: ''
+        rental_price: null
+        rating: 0.0
+        inStock: true
+        delivery_days: 7
+        warehouse_pickup_discount: 0.0
+        warranty_months: 24
+        replacement_days: 7
+        hsn_code: '9018'
+        gst_rate: 0.12
+      - id: 4
+        sku: SKU-1782534848
+        name: Glucometer
+        category: diagnostics
+        mrp: 1500.0
+        landing_price: 1200.0
+        is_active: true
+        image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+        original_image_url: null
+        description: ''
+        specifications: ''
+        rental_price: null
+        rating: 4.0
+        inStock: true
+        delivery_days: 7
+        warehouse_pickup_discount: 1.0
+        warranty_months: 24
+        replacement_days: 7
+        hsn_code: '9018'
+        gst_rate: 0.12
+      - id: 3
+        sku: SKU-1782521320
+        name: Quad
+        category: canes
+        mrp: 1500.0
+        landing_price: 1200.0
+        is_active: true
+        image_url: https://now.aapmr.org/wp-content/uploads/2017/03/DME-Fig-1-Blue-Yellow-Organic-Illustrative-Stress-Management-Tips-Infographic-768x1024.png.webp
+        original_image_url: https://now.aapmr.org/wp-content/uploads/2017/03/DME-Fig-1-Blue-Yellow-Organic-Illustrative-Stress-Management-Tips-Infographic-768x1024.png.webp
+        description: '
+
+          Copilot Search Branding
+
+
+          Like
+
+
+          Dislike
+
+          A quad cane is a walking aid with a four-point base designed to provide
+          enhanced stability and support compared to a standard single-tip cane.
+
+          A quad cane is a mobility device used by individuals who need extra balance
+          while walking, such as those recovering from surgery, managing chronic conditions,
+          or experiencing balance issue'
+        specifications: 'Weight: 500g
+
+          Material: Aluminium'
+        rental_price: null
+        rating: 4.0
+        inStock: true
+        delivery_days: 7
+        warehouse_pickup_discount: 0.0
+        warranty_months: 24
+        replacement_days: 7
+        hsn_code: '9018'
+        gst_rate: 0.12
+      - id: 2
+        sku: SKU-1782430540
+        name: walker
+        category: wheelchair
+        mrp: 9006.0
+        landing_price: 7204.8
+        is_active: true
+        image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+        original_image_url: null
+        description: qwerty
+        specifications: 'Weight: 10kg'
+        rental_price: null
+        rating: 4.0
+        inStock: true
+        delivery_days: 5
+        warehouse_pickup_discount: 1.0
+        warranty_months: 24
+        replacement_days: 7
+        hsn_code: '9018'
+        gst_rate: 0.12
+      - id: 1
+        sku: SKU-1782430377
+        name: wc
+        category: wheelchair
+        mrp: 7000.0
+        landing_price: 5600.0
+        is_active: true
+        image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+        original_image_url: null
+        description: qwerty
+        specifications: 'Material: Aluminium'
+        rental_price: null
+        rating: 3.0
+        inStock: true
+        delivery_days: 6
+        warehouse_pickup_discount: 0.0
+        warranty_months: 24
+        replacement_days: 7
+        hsn_code: '9018'
+        gst_rate: 0.12
+      total: 5
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint:
+  - data
+  - data[].category
+  - data[].delivery_days
+  - data[].description
+  - data[].gst_rate
+  - data[].hsn_code
+  - data[].id
+  - data[].image_url
+  - data[].inStock
+  - data[].is_active
+  - data[].landing_price
+  - data[].mrp
+  - data[].name
+  - data[].original_image_url
+  - data[].rating
+  - data[].rental_price
+  - data[].replacement_days
+  - data[].sku
+  - data[].specifications
+  - data[].warehouse_pickup_discount
+  - data[].warranty_months
+  - total
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/qr-analytics
+  original_path: /api/v1/admin/qr-analytics
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      stats:
+        total_qrs: 11
+        total_scans: 111
+        total_orders: 11
+        avg_conv: 9.9%
+      funnel:
+      - stage: QR Scans
+        value: 111
+        percentage: 100
+      - stage: Registrations
+        value: 11
+        percentage: 9.9
+      - stage: Purchases
+        value: 11
+        percentage: 9.9
+      rows:
+      - id: QR-101
+        chemist: pratha-store
+        scans: 26
+        orders: 4
+        conv: 15.4%
+        status: active
+        encoded_url: http://192.168.0.84:8080/shop?affiliate=9B337E6A9E1844BA
+      - id: QR-102
+        chemist: Noida
+        scans: 11
+        orders: 4
+        conv: 36.4%
+        status: active
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=02C0C8E60D614CF8
+      - id: QR-103
+        chemist: Noida
+        scans: 1
+        orders: 0
+        conv: 0.0%
+        status: active
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=20134B363D044CB8
+      - id: QR-104
+        chemist: Jetha medical
+        scans: 9
+        orders: 0
+        conv: 0.0%
+        status: active
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=D68B6983BC7546FC
+      - id: QR-105
+        chemist: jetha-meds
+        scans: 0
+        orders: 0
+        conv: 0.0%
+        status: inactive
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=B046AB16D4FB4714
+      - id: QR-106
+        chemist: Pradeep Yadav
+        scans: 11
+        orders: 2
+        conv: 18.2%
+        status: active
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=55BC6E7A190143D0
+      - id: QR-107
+        chemist: Ghaziabad
+        scans: 0
+        orders: 0
+        conv: 0.0%
+        status: inactive
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=7232D74B87A74B0A
+      - id: QR-108
+        chemist: manik medical
+        scans: 0
+        orders: 0
+        conv: 0.0%
+        status: inactive
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=38714FE7F1BC4A4E
+      - id: QR-109
+        chemist: Noida
+        scans: 53
+        orders: 1
+        conv: 1.9%
+        status: active
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=CB323BBC71C74138
+      - id: QR-110
+        chemist: Zed Phama
+        scans: 0
+        orders: 0
+        conv: 0.0%
+        status: inactive
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=4A348BD4FEA3426D
+      - id: QR-111
+        chemist: Pharmacy
+        scans: 0
+        orders: 0
+        conv: 0.0%
+        status: inactive
+        encoded_url: http://192.168.0.49:8080/shop?affiliate=6B176452DEFC4F4A
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint:
+  - funnel
+  - funnel[].percentage
+  - funnel[].stage
+  - funnel[].value
+  - rows
+  - rows[].chemist
+  - rows[].conv
+  - rows[].encoded_url
+  - rows[].id
+  - rows[].orders
+  - rows[].scans
+  - rows[].status
+  - stats
+  - stats.avg_conv
+  - stats.total_orders
+  - stats.total_qrs
+  - stats.total_scans
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/tiers
+  original_path: /api/v1/admin/tiers
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 1
+        name: silver
+        min_orders: 0
+        max_orders: null
+        description: Silver Tier - Baseline Tier
+        is_active: true
+      - id: 2
+        name: gold
+        min_orders: 20
+        max_orders: null
+        description: Gold Tier - Mid Level Tier
+        is_active: true
+      - id: 3
+        name: platinum
+        min_orders: 31
+        max_orders: null
+        description: Platinum Tier - High Level Tier
+        is_active: true
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint:
+  - data
+  - data[].description
+  - data[].id
+  - data[].is_active
+  - data[].max_orders
+  - data[].min_orders
+  - data[].name
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/admin/users?skip=0&limit=10
+  original_path: /api/v1/admin/users?skip=0&limit=10
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      data:
+      - id: 58
+        name: Abhi12
+        email: abhi12@vvnt.in
+        role: Distributor
+        last_login: 2026-07-31 08:34
+        status: rejected
+        created_at: '2026-07-31T08:34:12'
+      - id: 57
+        name: Abhi
+        email: abhi@vvnt.in
+        role: Chemist
+        last_login: 2026-07-31 08:31
+        status: active
+        created_at: '2026-07-31T08:31:08'
+      - id: 56
+        name: Shweta Maurya
+        email: shweta.maurya@vvtn.in
+        role: Customer
+        last_login: 2026-06-30 06:08
+        status: active
+        created_at: '2026-06-30T06:08:11'
+      - id: 55
+        name: S Singh202619
+        email: s.singh202619@gmail.com
+        role: Distributor
+        last_login: 2026-06-29 10:32
+        status: active
+        created_at: '2026-06-29T10:32:57'
+      - id: 54
+        name: Anya
+        email: anya@gmail.com
+        role: Distributor
+        last_login: 2026-06-27 09:37
+        status: inactive
+        created_at: '2026-06-27T09:37:25'
+      - id: 53
+        name: Pradeep Yadav12
+        email: pradeep.yadav12@vvnt.in
+        role: Distributor
+        last_login: 2026-06-27 09:24
+        status: active
+        created_at: '2026-06-27T09:24:22'
+      - id: 52
+        name: Rha
+        email: rha@gmail.com
+        role: Customer
+        last_login: 2026-06-27 08:54
+        status: active
+        created_at: '2026-06-27T08:54:59'
+      - id: 51
+        name: Vvnt001
+        email: vvnt001@gmail.com
+        role: Chemist
+        last_login: 2026-06-27 08:42
+        status: active
+        created_at: '2026-06-27T08:42:38'
+      - id: 50
+        name: Anny
+        email: anny@gmail.com
+        role: Chemist
+        last_login: 2026-06-27 08:13
+        status: active
+        created_at: '2026-06-27T08:13:43'
+      - id: 49
+        name: Pradeepyadav
+        email: pradeepyadav@vvnt.in
+        role: Chemist
+        last_login: 2026-06-27 07:26
+        status: rejected
+        created_at: '2026-06-27T07:26:20'
+      total: 33
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint:
+  - data
+  - data[].created_at
+  - data[].email
+  - data[].id
+  - data[].last_login
+  - data[].name
+  - data[].role
+  - data[].status
+  - total
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/catalog/categories
+  original_path: /api/v1/catalog/categories
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body:
+    - id: canes
+      label: Canes
+    - id: diagnostics
+      label: Diagnostics
+    - id: walker
+      label: Walker
+    - id: wheelchair
+      label: WheelChair
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint: []
+  sample_count: 2
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/catalog/products
+  original_path: /api/v1/catalog/products
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body:
+    - id: 1
+      sku: SKU-1782430377
+      name: wc
+      category: wheelchair
+      description: qwerty
+      mrp: 7000.0
+      landing_price: 5600.0
+      hsn_code: '9018'
+      gst_rate: 0.12
+      rx_flag: false
+      is_active: true
+      image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      original_image_url: null
+      image_gallery:
+      - https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      specs:
+      - label: Material
+        value: Aluminium
+      rental_price: null
+      rating: 3.0
+      reviews: 1
+      eta: in 6 days
+      delivery_days: 6
+      inStock: true
+      warehouse_pickup_discount: 0.0
+      warranty_months: 24
+    - id: 2
+      sku: SKU-1782430540
+      name: walker
+      category: wheelchair
+      description: qwerty
+      mrp: 9006.0
+      landing_price: 7204.8
+      hsn_code: '9018'
+      gst_rate: 0.12
+      rx_flag: false
+      is_active: true
+      image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      original_image_url: null
+      image_gallery:
+      - https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      specs:
+      - label: Weight
+        value: 10kg
+      rental_price: null
+      rating: 4.0
+      reviews: 1
+      eta: in 5 days
+      delivery_days: 5
+      inStock: true
+      warehouse_pickup_discount: 1.0
+      warranty_months: 24
+    - id: 3
+      sku: SKU-1782521320
+      name: Quad
+      category: canes
+      description: '
+
+        Copilot Search Branding
+
+
+        Like
+
+
+        Dislike
+
+        A quad cane is a walking aid with a four-point base designed to provide enhanced
+        stability and support compared to a standard single-tip cane.
+
+        A quad cane is a mobility device used by individuals who need extra balance
+        while walking, such as those recovering from surgery, managing chronic conditions,
+        or experiencing balance issue'
+      mrp: 1500.0
+      landing_price: 1200.0
+      hsn_code: '9018'
+      gst_rate: 0.12
+      rx_flag: false
+      is_active: true
+      image_url: https://now.aapmr.org/wp-content/uploads/2017/03/DME-Fig-1-Blue-Yellow-Organic-Illustrative-Stress-Management-Tips-Infographic-768x1024.png.webp
+      original_image_url: https://now.aapmr.org/wp-content/uploads/2017/03/DME-Fig-1-Blue-Yellow-Organic-Illustrative-Stress-Management-Tips-Infographic-768x1024.png.webp
+      image_gallery:
+      - https://now.aapmr.org/wp-content/uploads/2017/03/DME-Fig-1-Blue-Yellow-Organic-Illustrative-Stress-Management-Tips-Infographic-768x1024.png.webp
+      specs:
+      - label: Weight
+        value: 500g
+      - label: Material
+        value: Aluminium
+      rental_price: null
+      rating: 4.0
+      reviews: 2
+      eta: in 7 days
+      delivery_days: 7
+      inStock: true
+      warehouse_pickup_discount: 0.0
+      warranty_months: 24
+    - id: 4
+      sku: SKU-1782534848
+      name: Glucometer
+      category: diagnostics
+      description: ''
+      mrp: 1500.0
+      landing_price: 1200.0
+      hsn_code: '9018'
+      gst_rate: 0.12
+      rx_flag: false
+      is_active: true
+      image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      original_image_url: null
+      image_gallery:
+      - https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      specs: []
+      rental_price: null
+      rating: 4.0
+      reviews: 1
+      eta: in 7 days
+      delivery_days: 7
+      inStock: true
+      warehouse_pickup_discount: 1.0
+      warranty_months: 24
+    - id: 5
+      sku: SKU-1785467710
+      name: cane
+      category: canes
+      description: ''
+      mrp: 1993.0
+      landing_price: 1594.4
+      hsn_code: '9018'
+      gst_rate: 0.12
+      rx_flag: false
+      is_active: true
+      image_url: https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      original_image_url: null
+      image_gallery:
+      - https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop
+      specs: []
+      rental_price: null
+      rating: 0.0
+      reviews: 0
+      eta: in 7 days
+      delivery_days: 7
+      inStock: true
+      warehouse_pickup_discount: 0.0
+      warranty_months: 24
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/commissions/pending
+  original_path: /api/v1/commissions/pending
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+    - id: 11
+      payee: pratha-store
+      type: Chemist
+      amount: 1513.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-07-31'
+    - id: 100030
+      payee: manik
+      type: Distributor
+      amount: 5610.0
+      commission_amount: 5600.0
+      delivery_charge: 10.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_69bc98d9bade.pdf
+      payout_details:
+        bank_name: ''
+        settled_at: 2026-07-31T08:46
+        amount_paid: 5610.0
+        payment_time: 2026-07-31T08:46
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_69bc98d9bade.pdf
+      date: '2026-07-13'
+    - id: 100029
+      payee: manik
+      type: Distributor
+      amount: 2805.0
+      commission_amount: 2800.0
+      delivery_charge: 5.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-30'
+    - id: 100027
+      payee: manik
+      type: Distributor
+      amount: 64.0
+      commission_amount: 60.0
+      delivery_charge: 4.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-29'
+    - id: 100028
+      payee: manik
+      type: Distributor
+      amount: 2837.0
+      commission_amount: 2830.0
+      delivery_charge: 7.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-29'
+    - id: 3
+      payee: Noida
+      type: Chemist
+      amount: 1568.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      payout_details:
+        bank_name: ertyuio
+        settled_at: 2026-06-27T09:57
+        amount_paid: 1568.0
+        payment_time: 2026-06-27T09:57
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      date: '2026-06-27'
+    - id: 4
+      payee: Pradeep Yadav
+      type: Chemist
+      amount: 140.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_1ced5961fe79.pdf
+      payout_details:
+        bank_name: ''
+        settled_at: 2026-07-31T08:48
+        amount_paid: 140.0
+        payment_time: 2026-07-31T08:48
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_1ced5961fe79.pdf
+      date: '2026-06-27'
+    - id: 5
+      payee: Pradeep Yadav
+      type: Chemist
+      amount: 75.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_1ced5961fe79.pdf
+      payout_details:
+        bank_name: ''
+        settled_at: 2026-07-31T08:48
+        amount_paid: 75.0
+        payment_time: 2026-07-31T08:48
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_1ced5961fe79.pdf
+      date: '2026-06-27'
+    - id: 6
+      payee: Noida
+      type: Chemist
+      amount: 75.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      payout_details:
+        bank_name: ertyuio
+        settled_at: 2026-06-27T09:57
+        amount_paid: 75.0
+        payment_time: 2026-06-27T09:57
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      date: '2026-06-27'
+    - id: 7
+      payee: Noida
+      type: Chemist
+      amount: 2017.0
+      status: paid
+      payout_reference: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      payout_details:
+        bank_name: ertyuio
+        settled_at: 2026-06-27T09:57
+        amount_paid: 2017.0
+        payment_time: 2026-06-27T09:57
+        mode_of_payment: Bank Transfer
+        proof_of_payment: /api/v1/admin/documents/payout_b1b5d1d77cd5.pdf
+      date: '2026-06-27'
+    - id: 8
+      payee: pratha-store
+      type: Chemist
+      amount: 215.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 9
+      payee: Noida
+      type: Chemist
+      amount: 470.12
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 10
+      payee: Noida
+      type: Chemist
+      amount: 785.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100003
+      payee: manik
+      type: Distributor
+      amount: 1120.0
+      commission_amount: 1120.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100004
+      payee: manik
+      type: Distributor
+      amount: 560.0
+      commission_amount: 560.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100005
+      payee: manik
+      type: Distributor
+      amount: 1280.48
+      commission_amount: 1280.48
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100006
+      payee: Founder_ABC
+      type: Distributor
+      amount: 1120.0
+      commission_amount: 1120.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100007
+      payee: manik
+      type: Distributor
+      amount: 1440.96
+      commission_amount: 1440.96
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100008
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100009
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100010
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100011
+      payee: Founder_ABC
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100012
+      payee: Founder_ABC
+      type: Distributor
+      amount: 720.48
+      commission_amount: 720.48
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100013
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100014
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100015
+      payee: manik
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100016
+      payee: manik
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100017
+      payee: manik
+      type: Distributor
+      amount: 31.0
+      commission_amount: 30.0
+      delivery_charge: 1.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100018
+      payee: manik
+      type: Distributor
+      amount: 872.0
+      commission_amount: 870.0
+      delivery_charge: 2.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100019
+      payee: Founder_ABC
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100020
+      payee: Founder_ABC
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100021
+      payee: Founder_ABC
+      type: Distributor
+      amount: 30.0
+      commission_amount: 30.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100022
+      payee: manik
+      type: Distributor
+      amount: 1256.0
+      commission_amount: 1176.0
+      delivery_charge: 80.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100023
+      payee: manik
+      type: Distributor
+      amount: 840.0
+      commission_amount: 840.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100024
+      payee: Founder_ABC
+      type: Distributor
+      amount: 1620.48
+      commission_amount: 1620.48
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100025
+      payee: manik
+      type: Distributor
+      amount: 845.0
+      commission_amount: 840.0
+      delivery_charge: 5.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 100026
+      payee: manik
+      type: Distributor
+      amount: 2161.44
+      commission_amount: 2161.44
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-27'
+    - id: 1
+      payee: pratha-store
+      type: Chemist
+      amount: 180.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-26'
+    - id: 2
+      payee: pratha-store
+      type: Chemist
+      amount: 907.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-26'
+    - id: 100001
+      payee: manik
+      type: Distributor
+      amount: 720.0
+      commission_amount: 720.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-26'
+    - id: 100002
+      payee: manik
+      type: Distributor
+      amount: 720.0
+      commission_amount: 720.0
+      delivery_charge: 0.0
+      status: pending
+      payout_reference: null
+      payout_details: null
+      date: '2026-06-26'
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/notifications
+  original_path: /api/v1/notifications
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+    - id: 202
+      title: New Chemist Registration
+      message: Chemist 'Pharmacy' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-07-31T08:31:09Z'
+    - id: 200
+      title: New Order Placed
+      message: Order AMY-2026-0030 for ₹15130.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-07-13T05:38:41Z'
+    - id: 197
+      title: New Distributor Registration
+      message: Distributor 'VVnT Sequor' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-29T10:32:58Z'
+    - id: 192
+      title: New Replacement Request
+      message: 'Customer has requested replacement for order AMY-2026-0028 (Product:
+        Quad) due to transit breakage.'
+      type: warning
+      is_read: true
+      created_at: '2026-06-29T06:40:15Z'
+    - id: 189
+      title: Order Cancelled
+      message: Order AMY-2026-0024 has been cancelled by the customer.
+      type: warning
+      is_read: true
+      created_at: '2026-06-29T06:36:26Z'
+    - id: 187
+      title: New Order Placed
+      message: Order AMY-2026-0028 for ₹8967.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-29T06:10:56Z'
+    - id: 185
+      title: New Order Placed
+      message: Order AMY-2026-0027 for ₹3364.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-29T05:15:55Z'
+    - id: 183
+      title: New Order Placed
+      message: Order AMY-2026-0026 for ₹29700.16 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T12:42:45Z'
+    - id: 181
+      title: New Order Placed
+      message: Order AMY-2026-0025 for ₹7845.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T12:17:13Z'
+    - id: 178
+      title: New Order Placed
+      message: Order AMY-2026-0024 for ₹19158.05 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T12:05:21Z'
+    - id: 175
+      title: New Order Placed
+      message: Order AMY-2026-0023 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T10:51:36Z'
+    - id: 170
+      title: New Replacement Request
+      message: 'Customer has requested replacement for order AMY-2026-0022 (Product:
+        wc) due to manufacturing defect.'
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T10:40:15Z'
+    - id: 168
+      title: New Order Placed
+      message: Order AMY-2026-0022 for ₹10608.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T10:33:30Z'
+    - id: 141
+      title: New Order Placed
+      message: Order AMY-2026-0021 for ₹1680.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T09:43:00Z'
+    - id: 139
+      title: New Order Placed
+      message: Order AMY-2026-0020 for ₹1120.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T09:40:10Z'
+    - id: 132
+      title: New Distributor Registration
+      message: Distributor 'xyz ' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T09:37:25Z'
+    - id: 126
+      title: New Distributor Registration
+      message: Distributor 'Pradeep Yadav' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T09:24:22Z'
+    - id: 119
+      title: New Order Placed
+      message: Order AMY-2026-0019 for ₹1120.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T09:01:13Z'
+    - id: 118
+      title: New Chemist Registration
+      message: Chemist 'manik medical' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T08:42:38Z'
+    - id: 117
+      title: New Replacement Request
+      message: 'Customer has requested replacement for order AMY-2026-0007 (Product:
+        walker) due to transit breakage.'
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T08:40:39Z'
+    - id: 116
+      title: New Replacement Request
+      message: 'Customer has requested replacement for order AMY-2026-0005 (Product:
+        wc) due to transit breakage.'
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T08:38:21Z'
+    - id: 115
+      title: New Chemist Registration
+      message: Chemist 'Noida' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T08:13:43Z'
+    - id: 114
+      title: New Chemist Registration
+      message: Chemist 'Pradeep' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T07:26:20Z'
+    - id: 111
+      title: New Order Placed
+      message: Order AMY-2026-0018 for ₹11108.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T07:25:21Z'
+    - id: 107
+      title: New Chemist Registration
+      message: Chemist 'Zed Phama' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T07:13:49Z'
+    - id: 105
+      title: New Chemist Registration
+      message: Chemist 'Ghaziabad' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T07:10:47Z'
+    - id: 98
+      title: New Order Placed
+      message: Order AMY-2026-0017 for ₹4051.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:52:25Z'
+    - id: 97
+      title: New Replacement Request
+      message: 'Customer has requested replacement for order AMY-2026-0016 (Product:
+        Quad) due to manufacturing defect.'
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T06:51:39Z'
+    - id: 93
+      title: New Order Placed
+      message: Order AMY-2026-0016 for ₹4050.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:42:59Z'
+    - id: 91
+      title: New Order Placed
+      message: Order AMY-2026-0015 for ₹4500.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:40:53Z'
+    - id: 89
+      title: New Order Placed
+      message: Order AMY-2026-0014 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:36:03Z'
+    - id: 87
+      title: New Order Placed
+      message: Order AMY-2026-0013 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:31:48Z'
+    - id: 85
+      title: New Order Placed
+      message: Order AMY-2026-0012 for ₹10086.72 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:28:57Z'
+    - id: 83
+      title: Order Cancelled
+      message: Order AMY-2026-0004 has been cancelled by the customer.
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T06:26:06Z'
+    - id: 81
+      title: Order Cancelled
+      message: Order AMY-2026-0009 has been cancelled by the customer.
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T06:24:43Z'
+    - id: 78
+      title: Order Cancelled
+      message: Order AMY-2026-0010 has been cancelled by the customer.
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T06:24:23Z'
+    - id: 75
+      title: Order Cancelled
+      message: Order AMY-2026-0003 has been cancelled by the customer.
+      type: warning
+      is_read: true
+      created_at: '2026-06-27T06:23:54Z'
+    - id: 73
+      title: New Order Placed
+      message: Order AMY-2026-0011 for ₹4500.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:23:48Z'
+    - id: 70
+      title: New Order Placed
+      message: Order AMY-2026-0010 for ₹7056.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:22:53Z'
+    - id: 66
+      title: New Order Placed
+      message: Order AMY-2026-0009 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:19:02Z'
+    - id: 64
+      title: New Order Placed
+      message: Order AMY-2026-0008 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:18:43Z'
+    - id: 47
+      title: New Order Placed
+      message: Order AMY-2026-0007 for ₹20173.44 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:15:34Z'
+    - id: 46
+      title: New Chemist Registration
+      message: Chemist 'Noida' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:08:59Z'
+    - id: 44
+      title: New Order Placed
+      message: Order AMY-2026-0006 for ₹15680.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:08:41Z'
+    - id: 42
+      title: New Distributor Registration
+      message: Distributor 'distributor-12' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:05:20Z'
+    - id: 41
+      title: New Chemist Registration
+      message: Chemist 'jetha-meds' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:04:39Z'
+    - id: 39
+      title: New Order Placed
+      message: Order AMY-2026-0005 for ₹17926.72 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T06:02:08Z'
+    - id: 36
+      title: New Order Placed
+      message: Order AMY-2026-0004 for ₹7840.00 has been placed.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T05:57:54Z'
+    - id: 35
+      title: New Chemist Registration
+      message: Chemist 'Jetha medical' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T05:57:02Z'
+    - id: 34
+      title: New Distributor Registration
+      message: Distributor 'VVnt Foundation' has registered and is pending KYC.
+      type: info
+      is_read: true
+      created_at: '2026-06-27T05:54:09Z'
+    content_type: application/json
+    median_latency_ms: 16.0
+  schema_fingerprint: []
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /api/v1/reports/admin/stats
+  original_path: /api/v1/reports/admin/stats
+  is_templated: false
+  request:
+    body: null
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      gmv: 0
+      total_orders: 0
+      failed_orders: 0
+      sla_compliance: 100.0
+      pre_tax_base: 0.0
+      cgst: 0.0
+      sgst: 0.0
+      pending_commissions: 29463.959999999995
+      settled_commissions: 9485.0
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint:
+  - cgst
+  - failed_orders
+  - gmv
+  - pending_commissions
+  - pre_tax_base
+  - settled_commissions
+  - sgst
+  - sla_compliance
+  - total_orders
+  sample_count: 3
+  has_real_body: true
+  status_variants:
+  - 200
+- method: GET
+  path: /src/components/auth-shell.tsx
+  original_path: /src/components/auth-shell.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/lib/auth.ts
+  original_path: /src/lib/auth.ts
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 63.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.analytics.tsx
+  original_path: /src/routes/admin.analytics.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 47.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.analytics.tsx?tsr-split=component
+  original_path: /src/routes/admin.analytics.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.audit.tsx
+  original_path: /src/routes/admin.audit.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.audit.tsx?tsr-split=component
+  original_path: /src/routes/admin.audit.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.chemists.tsx
+  original_path: /src/routes/admin.chemists.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.chemists.tsx?tsr-split=component
+  original_path: /src/routes/admin.chemists.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.commissions.tsx
+  original_path: /src/routes/admin.commissions.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.commissions.tsx?tsr-split=component
+  original_path: /src/routes/admin.commissions.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.coupons.tsx
+  original_path: /src/routes/admin.coupons.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.distributors.tsx
+  original_path: /src/routes/admin.distributors.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.distributors.tsx?tsr-split=component
+  original_path: /src/routes/admin.distributors.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.finance.tsx
+  original_path: /src/routes/admin.finance.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.finance.tsx?tsr-split=component
+  original_path: /src/routes/admin.finance.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.index.tsx
+  original_path: /src/routes/admin.index.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 78.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.index.tsx?tsr-split=component
+  original_path: /src/routes/admin.index.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.login.tsx
+  original_path: /src/routes/admin.login.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.login.tsx?tsr-split=component
+  original_path: /src/routes/admin.login.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.notifications.tsx
+  original_path: /src/routes/admin.notifications.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.notifications.tsx?tsr-split=component
+  original_path: /src/routes/admin.notifications.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.onboard-partners.tsx
+  original_path: /src/routes/admin.onboard-partners.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.onboard-partners.tsx?tsr-split=component
+  original_path: /src/routes/admin.onboard-partners.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.products.tsx
+  original_path: /src/routes/admin.products.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.products.tsx?tsr-split=component
+  original_path: /src/routes/admin.products.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.qr.tsx
+  original_path: /src/routes/admin.qr.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.qr.tsx?tsr-split=component
+  original_path: /src/routes/admin.qr.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.settings.tsx
+  original_path: /src/routes/admin.settings.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.support.tsx
+  original_path: /src/routes/admin.support.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tiers.tsx
+  original_path: /src/routes/admin.tiers.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 78.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tsx
+  original_path: /src/routes/admin.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 219.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.tsx?tsr-split=component
+  original_path: /src/routes/admin.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 15.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.users.tsx
+  original_path: /src/routes/admin.users.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 78.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/admin.users.tsx?tsr-split=component
+  original_path: /src/routes/admin.users.tsx?tsr-split=component
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/order-success.tsx
+  original_path: /src/routes/order-success.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 219.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/product.$id.tsx
+  original_path: /src/routes/product.$id.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 62.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: GET
+  path: /src/routes/products.tsx
+  original_path: /src/routes/products.tsx
+  is_templated: false
+  request:
+    body: null
+    content_type: ''
+  response:
+    status: 200
+    body: null
+    content_type: application/json
+    median_latency_ms: 219.0
+  schema_fingerprint: []
+  sample_count: 1
+  has_real_body: false
+  status_variants:
+  - 200
+- method: POST
+  path: /api/v1/auth/admin/login
+  original_path: /api/v1/auth/admin/login
+  is_templated: false
+  request:
+    body:
+      email: aditya.pandey@vvnt.in
+      password: 12*************a.
+    content_type: application/json
+  response:
+    status: 200
+    body:
+      status: success
+      requires_2fa: false
+      access_token: ey****************************************************************************************************************************************9Q
+      refresh_token: ey*****************************************************************************************************************************************JM
+      token_type: be**er
+      email: aditya.pandey@vvnt.in
+      user_id: 1
+      role: admin
+      authenticated: true
+    content_type: application/json
+    median_latency_ms: null
+  schema_fingerprint:
+  - access_token
+  - authenticated
+  - email
+  - refresh_token
+  - requires_2fa
+  - role
+  - status
+  - token_type
+  - user_id
+  sample_count: 1
+  has_real_body: true
+  status_variants:
+  - 200
