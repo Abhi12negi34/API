@@ -348,11 +348,12 @@ def _scenario_tools_for_endpoint(endpoint: dict) -> list[str]:
     method = str(endpoint.get("method") or "GET").upper()
     path = str(endpoint.get("path") or endpoint.get("url") or "").lower()
     tools = ["k6"]
-    if method in {"POST", "PUT", "PATCH", "DELETE"} or any(token in path for token in ("auth", "login", "session", "token")):
+
+    needs_zap = method in {"POST", "PUT", "PATCH", "DELETE"} or any(token in path for token in ("auth", "login", "session", "token"))
+    if needs_zap:
         tools.insert(0, "zap")
+
     return list(dict.fromkeys(tools))
-
-
 def _request_is_api_candidate(request: dict) -> bool:
     if not isinstance(request, dict):
         return False
