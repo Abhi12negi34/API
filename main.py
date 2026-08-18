@@ -545,20 +545,23 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
 def _strategy_payload_is_grounded(strategy_payload: dict, target_url: str) -> bool:
     if not isinstance(strategy_payload, dict):
         return False
-    metadata = strategy_payload.get("metadata")
+
+    metadata = strategy_payload.get("metadata", {})
     if not isinstance(metadata, dict):
         metadata = {}
-    payload_target = str(strategy_payload.get("target_url") or metadata.get("target_url") or "").strip()
+
+    payload_target = str(strategy_payload.get("target_url") or metadata.get("target_url", "")).strip()
     if not payload_target:
         return False
+
     if not _same_host(payload_target, target_url):
         return False
+
     scenarios = strategy_payload.get("scenarios", [])
     if not isinstance(scenarios, list) or not scenarios:
         return False
+
     return True
-
-
 def _build_report_payload(execution_data, discovery_data=None, strategy_data=None):
     payload = copy.deepcopy(execution_data) if isinstance(execution_data, dict) else {}
     metadata = payload.get("metadata")
