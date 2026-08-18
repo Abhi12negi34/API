@@ -80,8 +80,6 @@ def _crew_output_raw(crew_output) -> str:
             return str(json_dict)
 
     return str(crew_output).strip()
-
-
 def _run_crewai_planning_phase(target_url: str, discovery_result: dict, capture_telemetry=None) -> dict:
     from crewai import Crew, Process, Task
     from agents.api_discovery_agent import api_discovery_agent, set_discovery_url
