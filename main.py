@@ -59,14 +59,11 @@ def _resolve_ollama_base_url(config: dict | None = None) -> str:
 
     if isinstance(config, dict):
         ollama_config = config.get("ollama", {})
-        if isinstance(ollama_config, dict):
-            host = str(ollama_config.get("host", "")).strip()
-            if host:
-                return host
+        host = str(ollama_config.get("host", "")).strip()
+        if host:
+            return host
 
     return "http://127.0.0.1:11434"
-
-
 def _crew_output_raw(crew_output) -> str:
     if crew_output is None:
         return ""
