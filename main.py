@@ -198,20 +198,19 @@ def _task_output_to_dict(task):
         return json_dict
 
     raw = getattr(output, "raw", "")
-    if raw:
-        try:
-            return json.loads(raw)
-        except Exception:
-            parsed = _parse_json_blob(raw)
-            if isinstance(parsed, dict):
-                return parsed
-            if isinstance(parsed, list):
-                return {"scenarios": parsed}
+    if not raw:
+        return {}
+
+    try:
+        return json.loads(raw)
+    except Exception:
+        parsed = _parse_json_blob(raw)
+        if isinstance(parsed, dict):
+            return parsed
+        elif isinstance(parsed, list):
+            return {"scenarios": parsed}
+        else:
             return {"raw_output": raw}
-
-    return {}
-
-
 def _parse_json_blob(value):
     if not isinstance(value, str):
         return None
