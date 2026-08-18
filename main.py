@@ -733,8 +733,6 @@ def _build_report_payload(execution_data, discovery_data=None, strategy_data=Non
                 payload[key] = copy.deepcopy(strategy_data[key])
 
     return payload
-
-
 def main():
     print("Initializing Autonomous AI API Testing Agent (USER PASS Certification Authority)")
     try:
