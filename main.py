@@ -375,19 +375,20 @@ def _request_is_api_candidate(request: dict) -> bool:
     if "json" in content_type or "graphql" in content_type:
         return True
 
-    if str(request.get("method") or "GET").upper() not in {"GET", "HEAD"}:
+    method = str(request.get("method") or "GET").upper()
+    if method not in {"GET", "HEAD"}:
         return True
 
     api_markers = ("api/", "/api", "auth", "login", "session", "token", "graphql", "admin", "orders", "products", "notifications")
     if any(marker in path for marker in api_markers):
         return True
 
-    if "?" in path and not any(path.endswith(ext) for ext in (".css", ".gif", ".htm", ".html", ".ico", ".jpeg", ".jpg", ".js", ".map", ".mp3", ".mp4", ".png", ".svg", ".ttf", ".webm", ".webp", ".woff", ".woff2")):
-        return True
+    if "?" in path:
+        static_extensions = (".css", ".gif", ".htm", ".html", ".ico", ".jpeg", ".jpg", ".js", ".map", ".mp3", ".mp4", ".png", ".svg", ".ttf", ".webm", ".webp", ".woff", ".woff2")
+        if not any(path.endswith(ext) for ext in static_extensions):
+            return True
 
     return False
-
-
 def _build_grounded_strategy_payload(target_url: str, discovery_data=None, capture_telemetry=None) -> dict:
     discovery_data = discovery_data if isinstance(discovery_data, dict) else {}
     discovered_apis = discovery_data.get("discovered_apis", [])
