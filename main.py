@@ -322,16 +322,19 @@ def _build_scenario_steps(api: dict, target_url: str) -> list[dict]:
         },
     ]
 
-    if method in {"POST", "PUT", "PATCH", "DELETE"} or any(token in path.lower() for token in ("auth", "login", "session", "token")):
+    needs_mutation_check = method in {"POST", "PUT", "PATCH", "DELETE"} or any(token in path.lower() for token in ("auth", "login", "session", "token"))
+    needs_edge_case_check = len(path.split("/")) > 4 or "?" in full_url
+
+    if needs_mutation_check:
         steps.append(
             {
-                "step_id": 5,
+                "step_id": len(steps) + 1,
                 "action": "Verify mutation, authorization, or session-specific side effects",
                 "expected_result": "Security-sensitive behavior is confirmed for the workflow.",
             }
         )
 
-    if len(path.split("/")) > 4 or "?" in full_url:
+    if needs_edge_case_check:
         steps.append(
             {
                 "step_id": len(steps) + 1,
@@ -341,8 +344,6 @@ def _build_scenario_steps(api: dict, target_url: str) -> list[dict]:
         )
 
     return steps
-
-
 def _scenario_tools_for_endpoint(endpoint: dict) -> list[str]:
     method = str(endpoint.get("method") or "GET").upper()
     path = str(endpoint.get("path") or endpoint.get("url") or "").lower()
