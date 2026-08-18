@@ -397,18 +397,23 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
 
     normalized_discovered = []
     seen = set()
-    for api in discovered_apis:
+
+    def process_api(api):
         if not isinstance(api, dict):
-            continue
+            return
+
         method = str(api.get("method") or "GET").upper()
         path = str(api.get("path") or "").strip()
         full_url = _normalize_strategy_url(target_url, api.get("full_url") or api.get("url") or path)
         full_url = full_url.split("?", 1)[0] if full_url else full_url
         key = (method, full_url, path)
+
         if key in seen:
-            continue
+            return
+
         seen.add(key)
-        normalized_discovered.append({
+
+        api_data = {
             "method": method,
             "path": path or urlparse(full_url).path or "/",
             "full_url": full_url,
@@ -424,30 +429,40 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
             "request_kind": api.get("request_kind"),
             "is_api_candidate": api.get("is_api_candidate"),
             "confidence": api.get("confidence"),
-        })
+        }
+        normalized_discovered.append(api_data)
+
+    for api in discovered_apis:
+        process_api(api)
 
     capture_requests = []
     if isinstance(capture_telemetry, dict):
         capture_requests = capture_telemetry.get("captured_requests", [])
+
     if isinstance(capture_requests, list):
         for request in capture_requests:
             if not _request_is_api_candidate(request):
                 continue
+
             method = str(request.get("method") or "GET").upper()
             full_url = str(request.get("url") or "").strip()
             path = str(request.get("path") or "").strip()
             if not full_url:
                 full_url = _normalize_strategy_url(target_url, path)
             full_url = full_url.split("?", 1)[0] if full_url else full_url
+
             if not path and full_url:
                 path = urlparse(full_url).path or "/"
             if not path:
                 continue
+
             key = (method, full_url, path)
             if key in seen:
                 continue
+
             seen.add(key)
-            normalized_discovered.append({
+
+            api_data = {
                 "method": method,
                 "path": path,
                 "full_url": full_url,
@@ -463,7 +478,8 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
                 "request_kind": "api_candidate",
                 "is_api_candidate": True,
                 "confidence": "high",
-            })
+            }
+            normalized_discovered.append(api_data)
 
     scenarios = []
     for index, api in enumerate(normalized_discovered, start=1):
@@ -472,26 +488,25 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
         family = _path_family(path)
         scenario_name = _scenario_name_from_family(family, method)
         scenario_path = api.get("full_url") or _normalize_strategy_url(target_url, path)
-        scenarios.append(
-            {
-                "scenario_id": f"SCN-{index:03d}",
-                "scenario_name": scenario_name,
-                "description": f"Exercise the discovered endpoint {path or scenario_path} using live traffic-derived data.",
-                "user_story": f"As a user, I want the {path or 'API'} endpoint to respond correctly so the application workflow stays stable.",
-                "api_role": "api",
-                "endpoints": [
-                    {
-                        "method": method,
-                        "url": scenario_path,
-                        "source": api.get("source_file", "discovery"),
-                        "expected_behavior": api.get("description") or "Returns a valid API response.",
-                    }
-                ],
-                "steps": _build_scenario_steps(api, target_url),
-                "performance_intent": "Validate live API behavior using the discovered endpoint surface.",
-                "testing_goal": f"Confirm the {path or scenario_path} endpoint behaves as discovered.",
-            }
-        )
+
+        scenarios.append({
+            "scenario_id": f"SCN-{index:03d}",
+            "scenario_name": scenario_name,
+            "description": f"Exercise the discovered endpoint {path or scenario_path} using live traffic-derived data.",
+            "user_story": f"As a user, I want the {path or 'API'} endpoint to respond correctly so the application workflow stays stable.",
+            "api_role": "api",
+            "endpoints": [
+                {
+                    "method": method,
+                    "url": scenario_path,
+                    "source": api.get("source_file", "discovery"),
+                    "expected_behavior": api.get("description") or "Returns a valid API response.",
+                }
+            ],
+            "steps": _build_scenario_steps(api, target_url),
+            "performance_intent": "Validate live API behavior using the discovered endpoint surface.",
+            "testing_goal": f"Confirm the {path or scenario_path} endpoint behaves as discovered.",
+        })
 
     traffic_capture = {}
     if isinstance(capture_telemetry, dict) and capture_telemetry:
@@ -527,8 +542,6 @@ def _build_grounded_strategy_payload(target_url: str, discovery_data=None, captu
         "run_all_registry_tools": True,
         "planning_context_excerpt": "Deterministic strategy derived from the discovered API inventory.",
     }
-
-
 def _strategy_payload_is_grounded(strategy_payload: dict, target_url: str) -> bool:
     if not isinstance(strategy_payload, dict):
         return False
