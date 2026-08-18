@@ -291,10 +291,9 @@ def _scenario_name_from_family(family: str, method: str) -> str:
     tokens = [piece for piece in str(family or "").strip("/").split("/") if piece]
     if not tokens:
         return f"{method.upper()} API Root"
+
     name = " ".join(token.replace("-", " ").replace("_", " ").title() for token in tokens)
     return f"{name} {method.upper()} Scenario"
-
-
 def _build_scenario_steps(api: dict, target_url: str) -> list[dict]:
     method = str(api.get("method") or "GET").upper()
     path = str(api.get("path") or api.get("full_url") or "").strip()
