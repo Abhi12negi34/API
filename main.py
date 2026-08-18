@@ -267,23 +267,26 @@ def _path_family(path: str) -> str:
     raw = str(path or "").strip()
     if not raw:
         return "/"
+
     parsed = urlparse(raw)
-    raw_path = parsed.path if parsed.scheme or parsed.netloc else raw.split("?", 1)[0]
+    if parsed.scheme or parsed.netloc:
+        raw_path = parsed.path
+    else:
+        raw_path = raw.split("?", 1)[0]
+
     parts = []
     for segment in raw_path.split("/"):
         cleaned = segment.strip()
-        if not cleaned:
+        if not cleaned or cleaned.isdigit():
             continue
-        if cleaned.isdigit():
-            continue
-        if re.fullmatch(r"[0-9a-fA-F-]{8,}", cleaned) and any(ch.isdigit() for ch in cleaned):
+
+        if re.fullmatch(r"[0-9a-fA-F]{8,}", cleaned) and any(ch.isdigit() for ch in cleaned):
             continue
         parts.append(cleaned)
+
     if not parts:
         return "/"
     return "/" + "/".join(parts[:3])
-
-
 def _scenario_name_from_family(family: str, method: str) -> str:
     tokens = [piece for piece in str(family or "").strip("/").split("/") if piece]
     if not tokens:
