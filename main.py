@@ -249,18 +249,20 @@ def _same_host(left: str, right: str) -> bool:
     return bool(_normalize_host(left) and _normalize_host(left) == _normalize_host(right))
 
 
+from urllib.parse import urljoin
+
 def _normalize_strategy_url(base_url: str, value: str) -> str:
     raw = str(value or "").strip()
     if not raw:
         return str(base_url or "").strip()
     if raw.startswith(("http://", "https://")):
         return raw
+
     base = str(base_url or "").strip().rstrip("/")
     if not base:
         return raw
+    
     return urljoin(f"{base}/", raw.lstrip("/"))
-
-
 def _path_family(path: str) -> str:
     raw = str(path or "").strip()
     if not raw:
