@@ -149,31 +149,32 @@ def _run_crewai_planning_phase(target_url: str, discovery_result: dict, capture_
 
     base_payload = _build_grounded_strategy_payload(target_url, discovery_result, capture_telemetry)
     if isinstance(parsed, dict) and _strategy_payload_is_grounded(parsed, target_url):
-        merged = copy.deepcopy(base_payload)
+        merged = base_payload.copy()  # Start with a copy to avoid modifying the original
+
         for key in ("target_url", "site_type", "inventory_summary", "scenarios", "planning_context_excerpt"):
             if key in parsed and parsed[key] is not None:
-                merged[key] = copy.deepcopy(parsed[key])
+                merged[key] = parsed[key].copy() if isinstance(parsed[key], dict) or isinstance(parsed[key], list) else parsed[key]
 
         for key in ("discovered_apis", "baseline", "discovery_baseline", "traffic_capture", "metadata"):
             if key in parsed and parsed[key] is not None:
                 if key == "metadata" and isinstance(parsed[key], dict):
                     merged_metadata = merged.get("metadata") if isinstance(merged.get("metadata"), dict) else {}
-                    merged_metadata.update(copy.deepcopy(parsed[key]))
+                    merged_metadata.update(parsed[key].copy())
                     merged["metadata"] = merged_metadata
                 else:
-                    merged[key] = copy.deepcopy(parsed[key])
+                    merged[key] = parsed[key].copy() if isinstance(parsed[key], dict) or isinstance(parsed[key], list) else parsed[key]
 
-        base_scenarios = base_payload.get("scenarios", []) if isinstance(base_payload.get("scenarios", []), list) else []
-        merged_scenarios = merged.get("scenarios", []) if isinstance(merged.get("scenarios", []), list) else []
+        base_scenarios = base_payload.get("scenarios", [])
+        merged_scenarios = merged.get("scenarios", [])
         for index, scenario in enumerate(merged_scenarios):
-            if not isinstance(scenario, dict) or scenario.get("steps"):
+            if not isinstance(scenario, dict) or scenario.get("steps") is None:
                 continue
-            if index < len(base_scenarios) and isinstance(base_scenarios[index], dict) and base_scenarios[index].get("steps"):
-                scenario["steps"] = copy.deepcopy(base_scenarios[index]["steps"])
+            if index < len(base_scenarios) and isinstance(base_scenarios[index], dict) and base_scenarios[index].get("steps") is not None:
+                scenario["steps"] = base_scenarios[index]["steps"].copy()
 
-        # Force registry-wide execution so every implemented tool runs on each assessment.
         merged["run_all_registry_tools"] = True
-        merged["metadata"] = merged.get("metadata") if isinstance(merged.get("metadata"), dict) else {}
+        if "metadata" not in merged:
+            merged["metadata"] = {}
         merged["metadata"].setdefault("target_url", target_url)
         merged["metadata"].setdefault("site_type", merged.get("site_type", "api"))
         merged["metadata"].setdefault("inventory_summary", merged.get("inventory_summary", {}))
@@ -182,8 +183,6 @@ def _run_crewai_planning_phase(target_url: str, discovery_result: dict, capture_
         return merged
 
     return base_payload
-
-
 def load_config():
     with open("config/config.yaml", "r") as f:
         return yaml.safe_load(f)
