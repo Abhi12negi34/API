@@ -773,8 +773,23 @@ def main():
     aggressive_discovery = playwright_config.get("aggressive_discovery")
     if isinstance(aggressive_discovery, str):
         aggressive_discovery = aggressive_discovery.strip().lower() in {"1", "true", "yes", "on"}
+
+    # Extract configuration values into local variables for better readability and reduced complexity
+    slow_mo_ms = playwright_config.get("slow_mo_ms") or 100
+    capture_trace = playwright_config.get("capture_trace")
+    capture_screenshots = playwright_config.get("capture_screenshots")
+    devtools = playwright_config.get("devtools")
+    max_pages = playwright_config.get("max_pages")
+    max_links = playwright_config.get("max_links")
+    max_clicks = playwright_config.get("max_clicks")
+    time_budget_s = playwright_config.get("time_budget_s")
+    stable_page_limit = playwright_config.get("stable_page_limit")
+    probe_ceiling = playwright_config.get("probe_ceiling")
+    auth_password = auth_config.get("password") or ""
+
     if aggressive_discovery is not None:
         os.environ["DISCOVERY_AGGRESSIVE"] = "true" if aggressive_discovery else "false"
+
 
     if manual_mode:
         from core.api.manual_capture import run_manual_capture_session
@@ -782,8 +797,8 @@ def main():
         capture_telemetry = run_manual_capture_session(
             target_url=target_url,
             workspace_root=Path.cwd(),
-            slow_mo_ms=playwright_config.get("slow_mo_ms") or 100,
-            auth_password=auth_config.get("password") or "",
+            slow_mo_ms=slow_mo_ms,
+            auth_password=auth_password,
         )
     else:
         print("\n[Pre-Step] Running Playwright traffic capture...")
@@ -791,18 +806,18 @@ def main():
             target_url=target_url,
             workspace_root=Path.cwd(),
             headless=playwright_config.get("headless"),
-            slow_mo_ms=playwright_config.get("slow_mo_ms"),
-            capture_trace=playwright_config.get("capture_trace"),
-            capture_screenshots=playwright_config.get("capture_screenshots"),
-            devtools=playwright_config.get("devtools"),
+            slow_mo_ms=slow_mo_ms,
+            capture_trace=capture_trace,
+            capture_screenshots=capture_screenshots,
+            devtools=devtools,
             aggressive_discovery=aggressive_discovery,
             auth_config=auth_config,
-            max_pages=playwright_config.get("max_pages"),
-            max_links=playwright_config.get("max_links"),
-            max_clicks=playwright_config.get("max_clicks"),
-            time_budget_s=playwright_config.get("time_budget_s"),
-            stable_page_limit=playwright_config.get("stable_page_limit"),
-            probe_ceiling=playwright_config.get("probe_ceiling"),
+            max_pages=max_pages,
+            max_links=max_links,
+            max_clicks=max_clicks,
+            time_budget_s=time_budget_s,
+            stable_page_limit=stable_page_limit,
+            probe_ceiling=probe_ceiling,
         )
 
     discovery_result = build_discovery_inventory(
@@ -848,8 +863,6 @@ def main():
     scorer.generate_user_pass_scorecard(parsed_result)
 
     print("\nAssessment complete. USER PASS Certificate generated.")
-
-
 if __name__ == "__main__":
     main()
 
