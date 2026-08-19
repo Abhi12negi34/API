@@ -4,7 +4,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-from collections import deque
+# from collections import deque
 from urllib.parse import urljoin, urlparse
 
 import yaml
